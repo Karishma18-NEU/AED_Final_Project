@@ -3,39 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Business.MediCareSenior;
+package Business.SeniorCare;
 import java.util.ArrayList;
 
 /**
  *
  * @author Karishma Murde
  */
-public class MediCareSeniorDirectory {
-    private ArrayList<MediCareSenior> mediCareSeniorList;
+public class SeniorCareDirectory {
+    private ArrayList<SeniorCare> seniorCareList;
     
-    public MediCareSeniorDirectory(){
-        this.mediCareSeniorList = new ArrayList<>();
+    public SeniorCareDirectory(){
+        this.seniorCareList = new ArrayList<>();
     }
 
-    public ArrayList<MediCareSenior> getMediCareSeniorList() {
-        return mediCareSeniorList;
+    public ArrayList<SeniorCare> getSeniorCareList() {
+        return seniorCareList;
     }
 
-    public void setMediCareSeniorList(ArrayList<MediCareSenior> mediCareSeniorList) {
-        this.mediCareSeniorList = mediCareSeniorList;
+    public void setSeniorCareList(ArrayList<SeniorCare> seniorCareList) {
+        this.seniorCareList = seniorCareList;
     }
     
-    public MediCareSenior createMediCareSenior(String name, int age){
-        MediCareSenior senior = new MediCareSenior();
+    public SeniorCare createSeniorCare(String name, int age){
+        SeniorCare senior = new SeniorCare();
         senior.setName(name);
         senior.setAge(age);
         senior.setStatus(false);
-        mediCareSeniorList.add(senior);
+        seniorCareList.add(senior);
         return senior;
     }
     
-    public void removeMediCareSenior(MediCareSenior senior){
-        mediCareSeniorList.remove(senior);
-    }
-    
+    public void removeSeniorCare(SeniorCare senior){
+        seniorCareList.remove(senior);
+    }    
 }
