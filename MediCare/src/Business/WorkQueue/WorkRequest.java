@@ -31,7 +31,7 @@ public abstract class WorkRequest {
         Job("Job Work Request"), 
         PostTask("Post Task WorkRequest"),
         SeniorCare("SeniorCare Work Request"),
-        RequestMedication("Medication Work Request");
+        SeniorMedical("Medication Work Request");
 
         private String value;
         private WorkRequestType(String value){
