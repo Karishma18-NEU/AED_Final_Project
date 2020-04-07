@@ -9,7 +9,7 @@ package Business.Network;
  *
  * @author Vardhana Bhatt
  */
-public class Network {
+public abstract class Network {
    private String name;
    private String networkName;
     
