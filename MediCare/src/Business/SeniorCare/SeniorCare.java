@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Business.MediCareSenior;
+package Business.SeniorCare;
 
 /**
  *
  * @author Karishma Murde
  */
-public class MediCareSenior {
+public class SeniorCare {
     private int id;
     private boolean status;
     private static int count = 1;
@@ -18,7 +18,7 @@ public class MediCareSenior {
     private String name;
     private int age;
     
-    public MediCareSenior(){
+    public SeniorCare(){
         id = count;
         count++;
     }
