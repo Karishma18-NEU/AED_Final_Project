@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Vardhana Bhatt
  */
-public class ManageOldAgeHomeJobApplicationJPanel extends javax.swing.JPanel {
+public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ManageOldAgeHomeEmployeeJobApplicationJPanel
@@ -35,7 +35,7 @@ public class ManageOldAgeHomeJobApplicationJPanel extends javax.swing.JPanel {
     private EcoSystem system;
     private UserAccount userAccount;
     
-    public ManageOldAgeHomeJobApplicationJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem system, UserAccount userAccount) {
+    public ManageOldAgeHomeJobApplicationsJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem system, UserAccount userAccount) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
