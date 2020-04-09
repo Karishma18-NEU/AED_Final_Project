@@ -171,7 +171,7 @@ public class ManageSeniorCareJPanel extends javax.swing.JPanel {
         enterprise.getSeniorCareDirectory().getSeniorCareList().add(senior);
         System.out.println(enterprise.getSeniorCareDirectory().getSeniorCareList().size());
 
-        system.getSeniorCareDirectory().createSeniorCare(seniorRequest.getSenior().getName(), seniorRequest.getSenior().getAge());
+        system.getSeniorCareDirectory().createSeniorCare(seniorRequest.getSenior().getName(), seniorRequest.getSenior().getAge(), seniorRequest.getSenior().isIllness());
         System.out.println(system.getSeniorCareDirectory().getSeniorCareList().size());
         //set agency status to false ie amount =0
         seniorRequest.getSenior().setStatus(false);

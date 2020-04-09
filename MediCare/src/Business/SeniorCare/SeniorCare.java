@@ -17,6 +17,7 @@ public class SeniorCare {
     private String state, city;
     private String name;
     private int age;
+    private boolean illness;
     
     public SeniorCare(){
         id = count;
@@ -73,6 +74,14 @@ public class SeniorCare {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public boolean isIllness() {
+        return illness;
+    }
+
+    public void setIllness(boolean illness) {
+        this.illness = illness;
     }
     
     @Override
