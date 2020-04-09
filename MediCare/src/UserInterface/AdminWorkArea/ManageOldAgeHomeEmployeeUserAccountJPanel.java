@@ -35,7 +35,7 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
     private Enterprise enterprise;
     private EcoSystem system;
     
-    public ManageRehabEmployeeUserAccountJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem system) {
+    public ManageOldAgeHomeEmployeeUserAccountJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem system) {
         initComponents();
         this.enterprise = enterprise;
         this.userProcessContainer = userProcessContainer;
