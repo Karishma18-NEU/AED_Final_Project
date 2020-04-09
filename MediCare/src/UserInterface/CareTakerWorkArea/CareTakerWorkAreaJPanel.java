@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CareTakerWorkArea;
+package UserInterface.CareTakerWorkArea;
 
 import UserInterface.VolunteerWorkArea.*;
 import Business.EcoSystem;
