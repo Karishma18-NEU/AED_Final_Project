@@ -72,7 +72,6 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
@@ -80,9 +79,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         btnAccept = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
-        setLayout(new java.awt.CardLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -90,10 +87,12 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Job Application");
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 290, 26));
 
         tblJobWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -115,12 +114,15 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         tblJobWorkRequest.getTableHeader().setReorderingAllowed(false);
         tblScrollPane.setViewportView(tblJobWorkRequest);
 
+        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 480, 178));
+
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
             }
         });
+        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 100, -1));
 
         btnDelete.setText("Reject");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -128,45 +130,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(btnBack)
-                        .addGap(129, 129, 129)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(153, 153, 153)
-                        .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(421, 421, 421)
-                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(164, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBack))
-                .addGap(52, 52, 52)
-                .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAccept)
-                    .addComponent(btnDelete))
-                .addContainerGap(457, Short.MAX_VALUE))
-        );
-
-        add(jPanel1, "card2");
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -204,7 +168,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                         system.getJobDirectory().removeJob(job);
 
                         break;
-                    } else if (org instanceof CampaignOrganization && job.getName().equalsIgnoreCase("coordinator")) {
+                    } else if (org instanceof CampaignOrganization && job.getName().equalsIgnoreCase("volunteer")) {
                         Employee employee = enterprise.getEmployeeDirectory().createEmployee(ua.getApplicant().getName());
                         org.getEmployeeDirectory().createEmployee(ua.getApplicant().getName());
                         enterprise.getEmployeeDirectory().getEmployeeList().add(employee);
@@ -247,7 +211,6 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblJobWorkRequest;
     private javax.swing.JScrollPane tblScrollPane;
