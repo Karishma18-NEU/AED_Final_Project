@@ -40,18 +40,20 @@ public abstract class Enterprise extends Organization {
         }  
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public EnterpriseType getEnterpriseType() {
+        return enterpriseType;
+    }
+
+    public void setEnterpriseType(EnterpriseType enterpriseType) {
+        this.enterpriseType = enterpriseType;
+    }
+
+    public OrganizationDirectory getOrganizationDirectory() {
+        return organizationDirectory;
+    }
+
+    public void setOrganizationDirectory(OrganizationDirectory organizationDirectory) {
+        this.organizationDirectory = organizationDirectory;
+    }
+
 }
