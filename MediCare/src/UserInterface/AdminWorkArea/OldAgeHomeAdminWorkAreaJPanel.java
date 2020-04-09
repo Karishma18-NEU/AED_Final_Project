@@ -10,28 +10,28 @@ import Business.Enterprise.Enterprise;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+
 /**
  *
  * @author Vardhana Bhatt
  */
-public class AdminWorkAreaJPanel extends javax.swing.JPanel {
+public class OldAgeHomeAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdminWorkAreaJPanel
+     * Creates new form OldAgeHomeAdminWorkAreaJPanel
      */
     private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount;
     private EcoSystem system;
     
-    public AdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,
+    public OldAgeHomeAdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,
             EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = userAccount;
         this.enterprise = enterprise;
         this.system = system;
-
     }
 
     /**
@@ -48,6 +48,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         btnPublishJobs = new javax.swing.JButton();
         btnManageJobApplications = new javax.swing.JButton();
         btnManageEmpUserAcc = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -86,36 +88,36 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(258, 258, 258)
+                .addGap(261, 261, 261)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPublishJobs, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageJobApplications, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageEmpUserAcc, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(37, 37, 37)
                 .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(114, 114, 114)
                 .addComponent(btnManageOrganization)
-                .addGap(47, 47, 47)
+                .addGap(45, 45, 45)
                 .addComponent(btnPublishJobs)
-                .addGap(47, 47, 47)
+                .addGap(45, 45, 45)
                 .addComponent(btnManageJobApplications)
-                .addGap(47, 47, 47)
+                .addGap(45, 45, 45)
                 .addComponent(btnManageEmpUserAcc)
-                .addContainerGap(392, Short.MAX_VALUE))
+                .addContainerGap(396, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManageOrganizationJPanel mojp = new ManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        ManageOldAgeHomeOrganizationJPanel mojp = new ManageOldAgeHomeOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("mojp", mojp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageOrganizationActionPerformed
@@ -123,7 +125,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnPublishJobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPublishJobsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        PublishJobsJPanel pjjp = new PublishJobsJPanel(userProcessContainer, system.getJobDirectory(), userAccount, system);
+        PublishOldAgeHomeJobsJPanel pjjp = new PublishOldAgeHomeJobsJPanel(userProcessContainer, system.getJobDirectory(), userAccount, system);
         userProcessContainer.add("pjjp", pjjp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnPublishJobsActionPerformed
@@ -131,7 +133,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnManageJobApplicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageJobApplicationsActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManageJobApplicationsJPanel mjajp = new ManageJobApplicationsJPanel(userProcessContainer, enterprise, system, userAccount);
+        ManageOldAgeHomeJobApplicationsJPanel mjajp = new ManageOldAgeHomeJobApplicationsJPanel(userProcessContainer, enterprise, system, userAccount);
         userProcessContainer.add("mjajp", mjajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageJobApplicationsActionPerformed
@@ -139,7 +141,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnManageEmpUserAccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmpUserAccActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManageEmployeeUserAccountJPanel meuajp = new ManageEmployeeUserAccountJPanel(userProcessContainer, enterprise, system);
+        ManageOldAgeHomeEmployeeUserAccountJPanel meuajp = new ManageOldAgeHomeEmployeeUserAccountJPanel(userProcessContainer, enterprise, system);
         userProcessContainer.add("meuajp", meuajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageEmpUserAccActionPerformed

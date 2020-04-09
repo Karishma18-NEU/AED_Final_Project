@@ -12,28 +12,29 @@ import Business.Job.JobDirectory;
 import Business.Network.City;
 import Business.Network.Country;
 import Business.Network.State;
-import Business.UserAccount.*;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Vardhana Bhatt
  */
-public class PublishJobsJPanel extends javax.swing.JPanel {
+public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form PublishJobsJPanel
+     * Creates new form PublishOldAgeHomeJobsJPanel
      */
     private JPanel userProcessContainer;
     private JobDirectory jobDirectory;
     private UserAccount userAccount;
     private EcoSystem system;
-
-    public PublishJobsJPanel(JPanel userProcessContainer, JobDirectory jobDirectory, UserAccount userAccount, EcoSystem system) {
+    
+    public PublishOldAgeHomeJobsJPanel(JPanel userProcessContainer, JobDirectory jobDirectory, UserAccount userAccount, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.jobDirectory = jobDirectory;
@@ -41,7 +42,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         this.system = system;
         populateTable();
     }
-
+    
     private void populateTable() {
         DefaultTableModel model = (DefaultTableModel) tblJobs.getModel();
         model.setRowCount(0);
@@ -69,7 +70,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                             }
                         }
                     }
-                }
+                }    
             }
         }
     }
@@ -93,7 +94,6 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -101,19 +101,17 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Publish Jobs");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 280, 26));
 
         tblJobs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Country", "State", "City", "NGO", "Job Title"
+                "Country", "State", "City", "Rehabilation", "Job Title"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -127,19 +125,14 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         tblJobs.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblJobs);
 
-        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 500, 190));
-
         btnDeleteJob.setText("Delete Job");
         btnDeleteJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteJobActionPerformed(evt);
             }
         });
-        add(btnDeleteJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 120, 30));
 
         lblName.setText("Job Title:");
-        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
-        add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +140,53 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addGap(121, 121, 121)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(437, 437, 437)
+                        .addComponent(btnDeleteJob, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(lblName)
+                        .addGap(37, 37, 37)
+                        .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(260, 260, 260)
+                        .addComponent(btnSubmit)))
+                .addContainerGap(171, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack)
+                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(btnDeleteJob, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblName)
+                    .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addComponent(btnSubmit)
+                .addContainerGap(329, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -192,7 +231,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                 return;
             }
 
-            if(name.equalsIgnoreCase("Manager") || name.equalsIgnoreCase("Coordinator")){
+            if(name.equalsIgnoreCase("CareTaker") || name.equalsIgnoreCase("Doctor")){
                 for (Country c : system.getNetworkList()) {
                     for (State s : c.getStateList()) {
                         for (City cy : s.getCityList()) {
@@ -208,7 +247,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                     }
                 }
             }else{
-                JOptionPane.showMessageDialog(null, "Job can be posted for 'Manager' or 'Coordinator' position only", "Info", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Job can be posted for 'CareTaker' or 'Doctor' position only", "Info", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 

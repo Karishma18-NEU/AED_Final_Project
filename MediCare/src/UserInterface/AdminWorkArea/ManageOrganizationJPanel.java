@@ -62,7 +62,6 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
@@ -72,20 +71,15 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         lblOrgType = new javax.swing.JLabel();
         btnAddOrganization1 = new javax.swing.JButton();
 
-        setLayout(new java.awt.CardLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
-        btnBack.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBackActionPerformed(evt);
-            }
-        });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Organization");
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, -1));
 
         tblOrg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -106,120 +100,20 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         tblOrg.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblOrg);
 
+        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, 150));
+
         btnDeleteOrganization.setText("Delete Organization");
-        btnDeleteOrganization.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteOrganizationActionPerformed(evt);
-            }
-        });
+        add(btnDeleteOrganization, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, -1, -1));
 
         cbOrgType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbOrgType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbOrgTypeActionPerformed(evt);
-            }
-        });
+        add(cbOrgType, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 150, -1));
 
         lblOrgType.setText("Organization Type:");
+        add(lblOrgType, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, -1, -1));
 
         btnAddOrganization1.setText("Add Organization");
-        btnAddOrganization1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddOrganization1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(135, 135, 135)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(380, 380, 380)
-                        .addComponent(btnDeleteOrganization))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(lblOrgType)
-                        .addGap(88, 88, 88)
-                        .addComponent(cbOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(btnAddOrganization1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(54, 54, 54)
-                .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(btnDeleteOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbOrgType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(btnAddOrganization1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        add(jPanel1, "card2");
+        add(btnAddOrganization1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
-
-    private void btnDeleteOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteOrganizationActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = tblOrg.getSelectedRow();
-        if (selectedRow >= 0) {
-            int dialogResult = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete the Organization?", "Warning", JOptionPane.YES_NO_OPTION);
-            if (dialogResult == JOptionPane.YES_OPTION) {
-                Organization o = (Organization) tblOrg.getValueAt(selectedRow, 0);
-                organizationDirectory.deleteOrganization(o);
-                populateTable();
-                JOptionPane.showMessageDialog(null, "Organization deleted successfully", "Warning", JOptionPane.WARNING_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
-        }
-    }//GEN-LAST:event_btnDeleteOrganizationActionPerformed
-
-    private void cbOrgTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbOrgTypeActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_cbOrgTypeActionPerformed
-
-    private void btnAddOrganization1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrganization1ActionPerformed
-        // TODO add your handling code here:
-        OrgType type = (OrgType) cbOrgType.getSelectedItem();
-        System.out.println(type.name());
-        for (Organization organization : organizationDirectory.getOrganizationList()) {
-            if(organization.getName().equals(type.name()+" Organization")){
-                JOptionPane.showMessageDialog(null, "Organization already exists", "Warning", JOptionPane.WARNING_MESSAGE);
-                return;
-            }
-        }
-        organizationDirectory.createOrganization(type);
-        populateTable();
-    }//GEN-LAST:event_btnAddOrganization1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -227,7 +121,6 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDeleteOrganization;
     private javax.swing.JComboBox cbOrgType;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblOrgType;
     private javax.swing.JTable tblOrg;

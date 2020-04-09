@@ -10,31 +10,32 @@ import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
 import Business.Job.Job;
 import Business.Organization.AdminOrganization;
-import Business.Organization.ManagerOrganization;
+import Business.Organization.MedicalOrganization;
+import Business.Organization.SeniorCareOrganization;
 import Business.Organization.Organization;
-import Business.Organization.CampaignOrganization;
-import Business.UserAccount.*;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.JobWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Vardhana Bhatt
  */
-public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
+public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageJobApplicationsJPanel
+     * Creates new form ManageOldAgeHomeEmployeeJobApplicationJPanel
      */
     private JPanel userProcessContainer;
     private Enterprise enterprise;
     private EcoSystem system;
     private UserAccount userAccount;
     
-    public ManageJobApplicationsJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem system, UserAccount userAccount) {
+    public ManageOldAgeHomeJobApplicationsJPanel(JPanel userProcessContainer, Enterprise enterprise, EcoSystem system, UserAccount userAccount) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
@@ -42,13 +43,15 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
         populateTable();
     }
-
+    
     public void populateTable() {
+
         DefaultTableModel dtm = (DefaultTableModel) tblJobWorkRequest.getModel();
         dtm.setRowCount(0);
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             if (organization instanceof AdminOrganization) {
                 for (WorkRequest workRequest : organization.getWorkQueue().getWorkRequestList()) {
+
                     if (workRequest instanceof JobWorkRequest
                             && !workRequest.getStatus().equals("Accepted")
                             && !workRequest.getStatus().equals("Rejected")) {
@@ -63,6 +66,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
             }
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -79,7 +83,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         btnAccept = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -87,12 +91,10 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Job Application");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, 290, 26));
 
         tblJobWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,15 +116,12 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         tblJobWorkRequest.getTableHeader().setReorderingAllowed(false);
         tblScrollPane.setViewportView(tblJobWorkRequest);
 
-        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 480, 178));
-
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
             }
         });
-        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 100, -1));
 
         btnDelete.setText("Reject");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +129,45 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 100, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnBack)
+                        .addGap(131, 131, 131)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(360, 360, 360)
+                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(54, 54, 54)
+                .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAccept)
+                    .addComponent(btnDelete))
+                .addContainerGap(466, Short.MAX_VALUE))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -151,10 +188,10 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                 UserAccount ua = (UserAccount) tblJobWorkRequest.getValueAt(selectedRow, 0);
                 WorkRequest workRequest = (WorkRequest) tblJobWorkRequest.getValueAt(selectedRow, 2);
                 for (Organization org : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    if (org instanceof ManagerOrganization && job.getName().equalsIgnoreCase("manager")) {
+                    if (org instanceof SeniorCareOrganization && job.getName().equalsIgnoreCase("caretaker")) {
 
                         if (org.getEmployeeDirectory().getEmployeeList().size() == 1) {
-                            JOptionPane.showMessageDialog(null, "Manager already exists", "Information", JOptionPane.INFORMATION_MESSAGE);
+                            JOptionPane.showMessageDialog(null, "CareTaker already exists", "Information", JOptionPane.INFORMATION_MESSAGE);
                             workRequest.setStatus("Rejected");
                             workRequest.setReceiver(userAccount);
                             populateTable();
@@ -168,10 +205,22 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                         system.getJobDirectory().removeJob(job);
 
                         break;
-                    } else if (org instanceof CampaignOrganization && job.getName().equalsIgnoreCase("volunteer")) {
+                    } else if (org instanceof MedicalOrganization && job.getName().equalsIgnoreCase("doctor")) {
+
+                        if (org.getEmployeeDirectory().getEmployeeList().size() == 1) {
+                            JOptionPane.showMessageDialog(null, "Doctor already exists", "Information", JOptionPane.INFORMATION_MESSAGE);
+                            workRequest.setStatus("Rejected");
+                            workRequest.setReceiver(userAccount);
+                            populateTable();
+                            return;
+                        }
+
                         Employee employee = enterprise.getEmployeeDirectory().createEmployee(ua.getApplicant().getName());
                         org.getEmployeeDirectory().createEmployee(ua.getApplicant().getName());
                         enterprise.getEmployeeDirectory().getEmployeeList().add(employee);
+                        enterprise.getJobDirectory().removeJob(job);
+                        system.getJobDirectory().removeJob(job);
+
                         break;
                     }
                 }
