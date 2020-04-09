@@ -99,27 +99,25 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblUserAcc = new javax.swing.JTable();
         btnDeleteAcc = new javax.swing.JButton();
-        lblOrg = new javax.swing.JLabel();
         cbOrg = new javax.swing.JComboBox();
+        lblOrg = new javax.swing.JLabel();
         lblEmp = new javax.swing.JLabel();
         cbEmp = new javax.swing.JComboBox();
-        lblRole = new javax.swing.JLabel();
         cbRole = new javax.swing.JComboBox();
+        lblRole = new javax.swing.JLabel();
         lblUserName = new javax.swing.JLabel();
         txtFldUserName = new javax.swing.JTextField();
-        lblPassword = new javax.swing.JLabel();
         txtFldPassword = new javax.swing.JTextField();
+        lblPassword = new javax.swing.JLabel();
         btnAddAccount = new javax.swing.JButton();
 
-        setLayout(new java.awt.CardLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -127,10 +125,12 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage User Account");
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 270, 26));
 
         tblUserAcc.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -151,14 +151,15 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
         tblUserAcc.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblUserAcc);
 
+        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 500, 170));
+
         btnDeleteAcc.setText("Delete Account");
         btnDeleteAcc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteAccActionPerformed(evt);
             }
         });
-
-        lblOrg.setText("Organization");
+        add(btnDeleteAcc, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, -1, -1));
 
         cbOrg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbOrg.addActionListener(new java.awt.event.ActionListener() {
@@ -166,8 +167,13 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
                 cbOrgActionPerformed(evt);
             }
         });
+        add(cbOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 146, -1));
+
+        lblOrg.setText("Organization");
+        add(lblOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, -1, -1));
 
         lblEmp.setText("Employee");
+        add(lblEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 80, -1));
 
         cbEmp.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbEmp.addActionListener(new java.awt.event.ActionListener() {
@@ -175,14 +181,21 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
                 cbEmpActionPerformed(evt);
             }
         });
-
-        lblRole.setText("Role");
+        add(cbEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 390, 146, -1));
 
         cbRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(cbRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 420, 146, -1));
+
+        lblRole.setText("Role");
+        add(lblRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 420, 61, -1));
 
         lblUserName.setText("User Name");
+        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, -1, -1));
+        add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 450, 146, -1));
+        add(txtFldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, 146, -1));
 
         lblPassword.setText("Password");
+        add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 70, -1));
 
         btnAddAccount.setText("Add Account");
         btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
@@ -190,91 +203,7 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
                 btnAddAccountActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(135, 135, 135)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(430, 430, 430)
-                        .addComponent(btnDeleteAcc))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblOrg)
-                        .addGap(109, 109, 109)
-                        .addComponent(cbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(90, 90, 90)
-                        .addComponent(cbEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblRole, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109)
-                        .addComponent(cbRole, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblUserName)
-                        .addGap(118, 118, 118)
-                        .addComponent(txtFldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(lblPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
-                        .addComponent(txtFldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(btnAddAccount)))
-                .addContainerGap(144, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(64, 64, 64)
-                .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btnDeleteAcc)
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOrg)
-                    .addComponent(cbOrg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblEmp)
-                    .addComponent(cbEmp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRole)
-                    .addComponent(cbRole, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblUserName)
-                    .addComponent(txtFldUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPassword)
-                    .addComponent(txtFldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(btnAddAccount)
-                .addContainerGap(236, Short.MAX_VALUE))
-        );
-
-        add(jPanel1, "card2");
+        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -401,7 +330,6 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox cbEmp;
     private javax.swing.JComboBox cbOrg;
     private javax.swing.JComboBox cbRole;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblEmp;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblOrg;
