@@ -32,7 +32,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
     private JobDirectory jobDirectory;
     private UserAccount userAccount;
     private EcoSystem system;
-    
+
     public PublishJobsJPanel(JPanel userProcessContainer, JobDirectory jobDirectory, UserAccount userAccount, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -69,7 +69,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                             }
                         }
                     }
-                }              
+                }
             }
         }
     }
@@ -83,19 +83,17 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblJobs = new javax.swing.JTable();
         btnDeleteJob = new javax.swing.JButton();
-        txtFldName = new javax.swing.JTextField();
         lblName = new javax.swing.JLabel();
+        txtFldName = new javax.swing.JTextField();
         btnSubmit = new javax.swing.JButton();
 
-        setLayout(new java.awt.CardLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -103,10 +101,12 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Publish Jobs");
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 280, 26));
 
         tblJobs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -127,14 +127,19 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         tblJobs.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblJobs);
 
+        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 500, 190));
+
         btnDeleteJob.setText("Delete Job");
         btnDeleteJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteJobActionPerformed(evt);
             }
         });
+        add(btnDeleteJob, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 320, 120, 30));
 
         lblName.setText("Job Title:");
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
+        add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -142,55 +147,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnBack)
-                        .addGap(125, 125, 125)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(lblName)
-                        .addGap(46, 46, 46)
-                        .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(btnSubmit)))
-                .addContainerGap(246, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnDeleteJob, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(124, 124, 124))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnBack)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnDeleteJob, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblName)
-                    .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(btnSubmit)
-                .addContainerGap(325, Short.MAX_VALUE))
-        );
-
-        add(jPanel1, "card2");
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -235,7 +192,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                 return;
             }
 
-            if(name.equalsIgnoreCase("Manager") || name.equalsIgnoreCase("Volunteer")){
+            if(name.equalsIgnoreCase("Manager") || name.equalsIgnoreCase("Coordinator")){
                 for (Country c : system.getNetworkList()) {
                     for (State s : c.getStateList()) {
                         for (City cy : s.getCityList()) {
@@ -251,7 +208,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
                     }
                 }
             }else{
-                JOptionPane.showMessageDialog(null, "Job can be posted for 'Manager' or 'Volunteer' position only", "Info", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Job can be posted for 'Manager' or 'Coordinator' position only", "Info", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
 
@@ -268,7 +225,6 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDeleteJob;
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblName;
     private javax.swing.JTable tblJobs;
