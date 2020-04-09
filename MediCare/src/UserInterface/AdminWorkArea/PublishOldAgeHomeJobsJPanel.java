@@ -111,7 +111,7 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Country", "State", "City", "Rehabilation", "Job Title"
+                "Country", "State", "City", "Old Age Home", "Job Title"
             }
         ) {
             boolean[] canEdit = new boolean [] {

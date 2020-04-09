@@ -25,10 +25,11 @@ public class SeniorCareDirectory {
         this.seniorCareList = seniorCareList;
     }
     
-    public SeniorCare createSeniorCare(String name, int age){
+    public SeniorCare createSeniorCare(String name, int age, boolean illness){
         SeniorCare senior = new SeniorCare();
         senior.setName(name);
         senior.setAge(age);
+        senior.setIllness(illness);
         senior.setStatus(false);
         seniorCareList.add(senior);
         return senior;

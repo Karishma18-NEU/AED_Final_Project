@@ -49,6 +49,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageJobApplications = new javax.swing.JButton();
         btnManageEmpUserAcc = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Admin Work Area ");

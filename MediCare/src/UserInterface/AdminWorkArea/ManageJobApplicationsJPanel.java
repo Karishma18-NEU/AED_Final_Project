@@ -79,6 +79,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         btnAccept = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
