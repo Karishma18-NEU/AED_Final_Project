@@ -51,8 +51,6 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
-        setLayout(new java.awt.CardLayout());
-
         controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         btnLogout.setText("Logout");
@@ -108,21 +106,19 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         splitPane.setLeftComponent(controlJPanel);
 
         userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout userProcessContainerLayout = new javax.swing.GroupLayout(userProcessContainer);
-        userProcessContainer.setLayout(userProcessContainerLayout);
-        userProcessContainerLayout.setHorizontalGroup(
-            userProcessContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 618, Short.MAX_VALUE)
-        );
-        userProcessContainerLayout.setVerticalGroup(
-            userProcessContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 798, Short.MAX_VALUE)
-        );
-
+        userProcessContainer.setLayout(new java.awt.CardLayout());
         splitPane.setRightComponent(userProcessContainer);
 
-        add(splitPane, "card2");
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
