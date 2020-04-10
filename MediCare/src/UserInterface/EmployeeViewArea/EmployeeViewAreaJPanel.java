@@ -30,9 +30,8 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
     private UserAccount userAccount;
     private Organization organization;
     private Enterprise enterprise;
-    public EmployeeViewAreaJPanel() {
+    public EmployeeViewAreaJPanel(JPanel userProcessContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
-     
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         this.dB4OUtil = dB4OUtil;
