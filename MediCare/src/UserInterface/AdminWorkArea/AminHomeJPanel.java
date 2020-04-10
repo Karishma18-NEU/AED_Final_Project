@@ -31,8 +31,35 @@ public class AminHomeJPanel extends javax.swing.JPanel {
     
     
     
-    public AminHomeJPanel() {
+    public AminHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Enterprise enterprise) {
         initComponents();
+        this.mainContainer = mainContainer;
+        this.system = system;
+        this.dB4OUtil = dB4OUtil;
+        this.userAccount = userAccount;
+        this.enterprise = enterprise;
+        
+        try{
+        if(enterprise.getEnterpriseType().getValue().equals("NGO")){
+            CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+            AdminWorkAreaJPanel awajp = new AdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
+            userProcessContainer.add("awajp", awajp);
+            cardLayout.next(userProcessContainer);
+        }
+        else{
+            CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+            OldAgeHomeAdminWorkAreaJPanel abcd = new OldAgeHomeAdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
+            userProcessContainer.add("abcd", abcd);
+            cardLayout.next(userProcessContainer);
+        }
+        }catch(NullPointerException ex){
+            System.out.println("Admin not found");
+            CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
+            mainContainer.remove(this);
+            cardLayout.previous(mainContainer);
+            dB4OUtil.storeSystem(system);
+        }
+
     }
 
     /**

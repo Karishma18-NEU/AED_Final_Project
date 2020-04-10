@@ -5,7 +5,7 @@
  */
 package UserInterface.CareTakerWorkArea;
 
-import UserInterface.VolunteerWorkArea.*;
+import UserInterface.CoordinatorWorkArea.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
