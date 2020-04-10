@@ -120,7 +120,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         try {
-//            enterprise = (Enterprise) cbEnterpriseType.getSelectedItem();
+//            
 
             String name = txtName.getText();
             String userName = txtUserName.getText();
