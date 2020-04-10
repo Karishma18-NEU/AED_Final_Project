@@ -8,6 +8,9 @@ package Business.Role;
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import javax.swing.JPanel;
+import Business.Enterprise.Enterprise;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
 
 /**
  *
