@@ -8,48 +8,57 @@ package UserInterface.DoctorWorkArea;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
+import Business.SeniorMedical.SeniorMedical;
 import Business.UserAccount.UserAccount;
+import Business.WorkQueue.SeniorMedicalWorkRequest;
+import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import Business.Employee.Employee;
-import Business.SeniorMedical.SeniorMedical;
 
 /**
  *
  * @author shalini
  */
-public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
+public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewOperationSeniorJPanel
+     * Creates new form ManageTreatmentSeniorJPanel
      */
+    
     private JPanel userProcessContainer;
+    private EcoSystem system;
     private UserAccount userAccount;
     private Organization organization;
     private Enterprise enterprise;
-    private EcoSystem system;
-    public ViewOperationSeniorJPanel() {
+    public ManageTreatmentSeniorJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount, Organization organization, Enterprise enterprise) {
+        
         initComponents();
         this.userProcessContainer = userProcessContainer;
+        this.system = system;
         this.userAccount = userAccount;
         this.organization = organization;
         this.enterprise = enterprise;
-        this.system = system;
-        populateViewVolunteerTable();
+        populateAgencyTable();
+    
     }
-    public void populateViewVolunteerTable() {
-        
-        DefaultTableModel model = (DefaultTableModel) tblViewVolunteers.getModel();
+       public void populateAgencyTable() {
+        DefaultTableModel model = (DefaultTableModel) tblFundingAgency.getModel();
 
         model.setRowCount(0);
-                for (SeniorMedical senior : enterprise.getSeniorMedicalDirectory().getseniorMedicalList()) {
-                    Object[] row = new Object[2];
-                    row[0] = senior;
-                    row[1] = senior.getAge();
+        for (WorkRequest request : organization.getWorkQueue().getWorkRequestList()) {
+            if (request instanceof  SeniorMedicalWorkRequest) {
+                if ((( SeniorMedicalWorkRequest) request).getSenior().isStatus() == true) {
+                    Object[] row = new Object[3];
+                    row[0] = (SeniorMedicalWorkRequest) request;
+                    row[1] = (( SeniorMedicalWorkRequest) request).getSenior().getAge();
                     model.addRow(row);
                 }
+            }
+        }
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,12 +70,20 @@ public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnAccept = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblViewVolunteers = new javax.swing.JTable();
+        tblFundingAgency = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnAccept.setText("Accept");
+        btnAccept.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcceptActionPerformed(evt);
+            }
+        });
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +92,7 @@ public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
             }
         });
 
-        tblViewVolunteers.setModel(new javax.swing.table.DefaultTableModel(
+        tblFundingAgency.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -91,38 +108,45 @@ public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblViewVolunteers);
+        jScrollPane1.setViewportView(tblFundingAgency);
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("View Senior Details");
+        lblHeader.setText("Manage Treatment of Senior");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119)
-                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(94, 94, 94)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                        .addGap(65, 65, 65)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(474, 474, 474)
+                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBack)
-                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(330, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(80, 80, 80)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(308, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -138,7 +162,7 @@ public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 703, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -146,6 +170,37 @@ public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tblFundingAgency.getSelectedRow();
+
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        SeniorMedicalWorkRequest seniorRequest = (SeniorMedicalWorkRequest) tblFundingAgency.getValueAt(selectedRow, 0);
+
+        //Updating account and account directory
+        SeniorMedical senior = new SeniorMedical ();
+        senior.setName(seniorRequest.getSenior().getName());
+        senior.setAge(seniorRequest.getSenior().getAge());
+        enterprise.getSeniorMedicalDirectory().getseniorMedicalList().add(senior);
+
+        //FosterCareChildren children = new FosterCareChildren();
+        //children.setName(childRequest.getChild().getName());
+        //enterprise.getFosterCareDirectory().getFosterCareChildrenList().remove(children);
+
+        system.getSeniorMedicalDirectory().createSeniorMedical(seniorRequest.getSenior().getName(), seniorRequest.getSenior().getAge(),seniorRequest.getSenior().isIllness());
+        //system.getFosterCareDirectory().removeFosterCareChildren(children);
+        //set agency status to false ie amount =0
+        seniorRequest.getSenior().setStatus(false);
+        seniorRequest.setReceiver(userAccount);
+        seniorRequest.setStatus("Accepted");
+        populateAgencyTable();
+        JOptionPane.showMessageDialog(null, "Accepted");
+    }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -156,10 +211,11 @@ public class ViewOperationSeniorJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnBack;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JTable tblViewVolunteers;
+    private javax.swing.JTable tblFundingAgency;
     // End of variables declaration//GEN-END:variables
 }
