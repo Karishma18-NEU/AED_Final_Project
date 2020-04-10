@@ -246,7 +246,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnManageRehabilationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRehabilationActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManageOldAgeHomeJPanel abcd = new ManageOldAgeHomeJPanel(userProcessContainer, system);
+        ManageRehabilationJPanel abcd = new ManageRehabilationJPanel(userProcessContainer, system);
         userProcessContainer.add("abcd",abcd);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageRehabilationActionPerformed
