@@ -43,7 +43,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         btnNgoList = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -51,10 +51,10 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Applicant view Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 27));
 
-        btnNgoList.setText("NGOs of EcoSystem");
+        btnNgoList.setText("Trusts of EcoSystem");
         btnNgoList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNgoListActionPerformed(evt);
+                btnTrustListActionPerformed(evt);
             }
         });
         add(btnNgoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 251, -1));
@@ -68,9 +68,9 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 251, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNgoListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNgoListActionPerformed
+    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
       
-    }//GEN-LAST:event_btnNgoListActionPerformed
+    }//GEN-LAST:event_btnTrustListActionPerformed
 
     private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
         

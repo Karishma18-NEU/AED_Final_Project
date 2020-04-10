@@ -94,7 +94,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         btnApply = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -110,7 +110,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Country", "State", "City", "NGO", "Job Title"
+                "Country", "State", "City", "Trust", "Job Title"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -213,13 +213,6 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
             if (organization instanceof AdminOrganization) {
                 org = organization;
-//                for(UserAccount ua: enterprise.getUserAccountDirectory().getUserAccountList()){
-//                    if(ua.getRole().getName().equals("Admin Type")){
-//                         request.setReceiver(ua);
-//                         ua.getWorkQueue().getWorkRequestList().add(request);
-//                }
-//                }
-
                 break;
             }
         }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.AdminWorkArea;
+package UserInterface.CoordinatorWorkArea;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
@@ -13,26 +13,36 @@ import Business.UserAccount.UserAccount;
 import UserInterface.EmployeeViewArea.EmployeeViewAreaJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+
 /**
  *
  * @author Vardhana Bhatt
  */
-public class AminHomeJPanel extends javax.swing.JPanel {
+public class CoordinatorHomeJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AminHomeJPanel
+     * Creates new form CoordinatorHomeJPanel
      */
     private JPanel mainContainer;
     private EcoSystem system;
     private DB4OUtil dB4OUtil;
-    private Enterprise enterprise;
     private UserAccount userAccount;
     private Organization organization;
-    
-    
-    
-    public AminHomeJPanel() {
+    private Enterprise enterprise;
+
+    public CoordinatorHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
+        this.mainContainer = mainContainer;
+        this.system = system;
+        this.dB4OUtil = dB4OUtil;
+        this.userAccount = userAccount;
+        this.organization = organization;
+        this.enterprise = enterprise;
+
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        CoordinatorWorkAreaJPanel cwajp = new CoordinatorWorkAreaJPanel(userProcessContainer, system, userAccount, organization, enterprise);
+        userProcessContainer.add("CoorinatorWorkAreaJPanel", cwajp);
+        cardLayout.next(userProcessContainer);
     }
 
     /**
@@ -52,6 +62,8 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         userProcessContainer = new javax.swing.JPanel();
 
         controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
+        controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -78,34 +90,34 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnWorkArea, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnViewArea, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnLogout)
                 .addGap(18, 18, 18))
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnWorkArea, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                    .addComponent(btnViewArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(btnLogout)
-                .addGap(124, 124, 124)
+                .addGap(109, 109, 109)
                 .addComponent(btnWorkArea)
-                .addGap(18, 18, 18)
+                .addGap(55, 55, 55)
                 .addComponent(btnViewArea)
-                .addContainerGap(567, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);
 
         userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
+        userProcessContainer.setMaximumSize(new java.awt.Dimension(700, 700));
+        userProcessContainer.setMinimumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         splitPane.setRightComponent(userProcessContainer);
 
@@ -113,7 +125,7 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 907, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,6 +135,7 @@ public class AminHomeJPanel extends javax.swing.JPanel {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
+
         CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
         mainContainer.remove(this);
         cardLayout.previous(mainContainer);
@@ -133,8 +146,8 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        AdminWorkAreaJPanel awajp = new AdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
-        userProcessContainer.add("awajp", awajp);
+        CoordinatorWorkAreaJPanel cwajp = new CoordinatorWorkAreaJPanel(userProcessContainer, system, userAccount, organization, enterprise);
+        userProcessContainer.add("VolunteerWorkAreaJPanel", cwajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnWorkAreaActionPerformed
 

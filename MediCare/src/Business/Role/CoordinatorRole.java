@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UserInterface.CoordinatorWorkArea.CoordinatorHomeJPanel;
 /**
  *
  * @author shalini

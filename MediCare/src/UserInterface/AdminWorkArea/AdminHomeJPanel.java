@@ -3,42 +3,63 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.ApplicantWorkArea;
+package UserInterface.AdminWorkArea;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UserInterface.LoginJPanel;
+import UserInterface.EmployeeViewArea.EmployeeViewAreaJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
-
 /**
  *
- * @author shalini
+ * @author Vardhana Bhatt
  */
-public class ApplicantHomeJPanel extends javax.swing.JPanel {
+public class AdminHomeJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ApplicantHomeJPanel
+     * Creates new form AminHomeJPanel
      */
     private JPanel mainContainer;
     private EcoSystem system;
     private DB4OUtil dB4OUtil;
+    private Enterprise enterprise;
     private UserAccount userAccount;
-
-    public ApplicantHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount) {
+    private Organization organization;
+    
+    
+    
+    public AdminHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Enterprise enterprise) {
         initComponents();
         this.mainContainer = mainContainer;
         this.system = system;
         this.dB4OUtil = dB4OUtil;
         this.userAccount = userAccount;
+        this.enterprise = enterprise;
         
-        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ApplicantWorkAreaJPanel awajp = new ApplicantWorkAreaJPanel(userProcessContainer, system, userAccount, dB4OUtil);
-        userProcessContainer.add("ApplicantWorkAreaJPanel", awajp);
-        cardLayout.next(userProcessContainer);
+        try{
+        if(enterprise.getEnterpriseType().getValue().equals("NGO")){
+            CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+            AdminWorkAreaJPanel awajp = new AdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
+            userProcessContainer.add("awajp", awajp);
+            cardLayout.next(userProcessContainer);
+        }
+        else{
+            CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+            OldAgeHomeAdminWorkAreaJPanel abcd = new OldAgeHomeAdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
+            userProcessContainer.add("abcd", abcd);
+            cardLayout.next(userProcessContainer);
+        }
+        }catch(NullPointerException ex){
+            System.out.println("Admin not found");
+            CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
+            mainContainer.remove(this);
+            cardLayout.previous(mainContainer);
+            dB4OUtil.storeSystem(system);
+        }
+
     }
 
     /**
@@ -57,16 +78,7 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
-        setMaximumSize(new java.awt.Dimension(900, 900));
-        setPreferredSize(new java.awt.Dimension(900, 900));
-        setLayout(new java.awt.CardLayout());
-
-        splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
-        splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
-
         controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
-        controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
-        controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -94,46 +106,53 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnWorkArea, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                    .addComponent(btnViewArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnWorkArea, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout)
-                .addGap(57, 57, 57))
+                .addComponent(btnViewArea, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(20, 20, 20)
                 .addComponent(btnLogout)
-                .addGap(97, 97, 97)
+                .addGap(124, 124, 124)
                 .addComponent(btnWorkArea)
-                .addGap(55, 55, 55)
+                .addGap(18, 18, 18)
                 .addComponent(btnViewArea)
-                .addContainerGap(627, Short.MAX_VALUE))
+                .addContainerGap(567, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);
 
         userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
-        userProcessContainer.setMaximumSize(new java.awt.Dimension(700, 700));
-        userProcessContainer.setMinimumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         splitPane.setRightComponent(userProcessContainer);
 
-        add(splitPane, "card2");
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-
         CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
-        LoginJPanel ljp = new LoginJPanel(mainContainer, system, dB4OUtil);
-        mainContainer.add("ljp", ljp);
-        cardLayout.next(mainContainer);
+        mainContainer.remove(this);
+        cardLayout.previous(mainContainer);
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
@@ -141,16 +160,17 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ApplicantWorkAreaJPanel awajp = new ApplicantWorkAreaJPanel(userProcessContainer, system, userAccount, dB4OUtil);
-        userProcessContainer.add("ApplicantWorkAreaJPanel", awajp);
+        AdminWorkAreaJPanel awajp = new AdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
+        userProcessContainer.add("awajp", awajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnWorkAreaActionPerformed
 
     private void btnViewAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAreaActionPerformed
         // TODO add your handling code here:
+
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ApplicantViewAreaJPanel avajp = new ApplicantViewAreaJPanel(userProcessContainer, system, dB4OUtil);
-        userProcessContainer.add("avajp", avajp);
+        EmployeeViewAreaJPanel evajp = new EmployeeViewAreaJPanel(userProcessContainer, system, dB4OUtil, userAccount, organization, enterprise);
+        userProcessContainer.add("evajp", evajp);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnViewAreaActionPerformed
 

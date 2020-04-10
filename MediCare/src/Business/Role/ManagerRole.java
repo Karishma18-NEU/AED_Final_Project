@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shali
+ * @author shalini
  */
 public class ManagerRole extends Role{
      public ManagerRole(){

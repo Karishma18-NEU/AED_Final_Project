@@ -30,9 +30,8 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
     private UserAccount userAccount;
     private Organization organization;
     private Enterprise enterprise;
-    public EmployeeViewAreaJPanel() {
+    public EmployeeViewAreaJPanel(JPanel userProcessContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Organization organization, Enterprise enterprise) {
         initComponents();
-     
         this.userProcessContainer = userProcessContainer;
         this.system = system;
         this.dB4OUtil = dB4OUtil;
@@ -60,13 +59,13 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnRehabList = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnNgoList.setText("NGOs of EcoSystem");
+        btnNgoList.setText("Trusts of EcoSystem");
         btnNgoList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNgoListActionPerformed(evt);
+                btnTrustListActionPerformed(evt);
             }
         });
         jPanel1.add(btnNgoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 115, 251, -1));
@@ -109,10 +108,10 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         jPanel1.add(btnViewResolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 251, -1));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 160));
 
-        btnRehabList.setText("Rehabs of EcoSystem");
+        btnRehabList.setText("Old Age Home of EcoSystem");
         btnRehabList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRehabListActionPerformed(evt);
+                btnOldAgeHomeListActionPerformed(evt);
             }
         });
         jPanel1.add(btnRehabList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 251, -1));
@@ -139,10 +138,10 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNgoListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNgoListActionPerformed
+    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
         // TODO add your handling code here:
       
-    }//GEN-LAST:event_btnNgoListActionPerformed
+    }//GEN-LAST:event_btnTrustListActionPerformed
 
     private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed
         // TODO add your handling code here:
@@ -166,10 +165,10 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnViewResolvedActionPerformed
 
-    private void btnRehabListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRehabListActionPerformed
+    private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_btnRehabListActionPerformed
+    }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
 
     private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
         // TODO add your handling code here:

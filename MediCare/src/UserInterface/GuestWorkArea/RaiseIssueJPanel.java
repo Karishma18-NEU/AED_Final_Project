@@ -40,12 +40,12 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnChildLabour = new javax.swing.JButton();
-        btnAdoptionRehab = new javax.swing.JButton();
+        btnMedications = new javax.swing.JButton();
+        btnTreatmentOldAgeHome = new javax.swing.JButton();
         btnDonation = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -56,21 +56,21 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         lblHeader.setText("Raise An Issue");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 180, 26));
 
-        btnChildLabour.setText("Child Labour Issue");
-        btnChildLabour.addActionListener(new java.awt.event.ActionListener() {
+        btnMedications.setText("Provide Medications Issue");
+        btnMedications.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnChildLabourActionPerformed(evt);
+                btnMedicationsActionPerformed(evt);
             }
         });
-        add(btnChildLabour, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 182, -1));
+        add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 260, -1));
 
-        btnAdoptionRehab.setText("Child Adoption");
-        btnAdoptionRehab.addActionListener(new java.awt.event.ActionListener() {
+        btnTreatmentOldAgeHome.setText("Provide Treatment Issue");
+        btnTreatmentOldAgeHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdoptionRehabActionPerformed(evt);
+                btnTreatmentOldAgeHomeActionPerformed(evt);
             }
         });
-        add(btnAdoptionRehab, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 182, -1));
+        add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 260, -1));
 
         btnDonation.setText("Donation of Basic Amenities");
         btnDonation.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +78,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnDonationActionPerformed(evt);
             }
         });
-        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 182, -1));
+        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 260, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -86,24 +86,24 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnChildLabourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChildLabourActionPerformed
+    private void btnMedicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicationsActionPerformed
 
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Child Labour", system);
+        RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Medications", system);
         userProcessContainer.add("rirwjp", rirwjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnChildLabourActionPerformed
+    }//GEN-LAST:event_btnMedicationsActionPerformed
 
-    private void btnAdoptionRehabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdoptionRehabActionPerformed
+    private void btnTreatmentOldAgeHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTreatmentOldAgeHomeActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Child Adoption", system);
+        RaiseIssueWorkRequestJPanel rirwjp = new RaiseIssueWorkRequestJPanel(userProcessContainer, userAccount, "Treatment Senior", system);
         userProcessContainer.add("rirwjp", rirwjp);
         cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnAdoptionRehabActionPerformed
+    }//GEN-LAST:event_btnTreatmentOldAgeHomeActionPerformed
 
     private void btnDonationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDonationActionPerformed
         // TODO add your handling code here:
@@ -122,10 +122,10 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdoptionRehab;
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnChildLabour;
     private javax.swing.JButton btnDonation;
+    private javax.swing.JButton btnMedications;
+    private javax.swing.JButton btnTreatmentOldAgeHome;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

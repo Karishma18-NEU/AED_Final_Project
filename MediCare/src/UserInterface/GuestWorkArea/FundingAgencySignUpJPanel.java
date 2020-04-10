@@ -82,15 +82,15 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     }
 
     public void populateEnterpriseType() {
-        cbNGOName.removeAllItems();
+        cbTrustName.removeAllItems();
         if (cbCity.getSelectedItem() != null) {
             for (Country c : system.getNetworkList()) {
                 for (State s : c.getStateList()) {
                     for (City city : s.getCityList()) {
                         if (city.equals(cbCity.getSelectedItem())) {
                             for (Enterprise e : city.getEnterpriseDirectory().getEnterpriseList()) {
-                                if(e.getEnterpriseType().getValue().equals("NGO")){
-                                    cbNGOName.addItem(e);
+                                if(e.getEnterpriseType().getValue().equals("Trust")){
+                                    cbTrustName.addItem(e);
                                 }
                             }
                         }
@@ -122,11 +122,11 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         cbState = new javax.swing.JComboBox<>();
         cbCity = new javax.swing.JComboBox<>();
         lblEnterpriseType = new javax.swing.JLabel();
-        cbNGOName = new javax.swing.JComboBox();
+        cbTrustName = new javax.swing.JComboBox();
         btnBack = new javax.swing.JButton();
         lblWarning = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -143,7 +143,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
 
         lblAgencyName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblAgencyName.setText("Agency Name:");
-        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 96, 20));
+        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 220, 110, 20));
 
         lblCountry.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCountry.setText("Country:");
@@ -189,9 +189,9 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 150, -1));
 
         lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblEnterpriseType.setText("NGO Name:");
-        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 80, 20));
-        add(cbNGOName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 150, -1));
+        lblEnterpriseType.setText("Trust Name:");
+        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 100, 20));
+        add(cbTrustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 150, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -209,7 +209,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
         // TODO add your handling code here:
 
-        enterprise = (Enterprise) cbNGOName.getSelectedItem();
+        enterprise = (Enterprise) cbTrustName.getSelectedItem();
         AgencyWorkRequest request = new AgencyWorkRequest();
         String agencyName = txtAgencyName.getText();
         String budgetStr = txtBudget.getText();
@@ -286,8 +286,8 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnSubmit;
     private javax.swing.JComboBox<Object> cbCity;
     private javax.swing.JComboBox<Object> cbCountry;
-    private javax.swing.JComboBox cbNGOName;
     private javax.swing.JComboBox<Object> cbState;
+    private javax.swing.JComboBox cbTrustName;
     private javax.swing.JLabel lblAgencyName;
     private javax.swing.JLabel lblBudget;
     private javax.swing.JLabel lblCity;

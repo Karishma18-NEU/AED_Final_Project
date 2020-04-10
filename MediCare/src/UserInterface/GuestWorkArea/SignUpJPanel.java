@@ -69,7 +69,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         confirmPassFld = new javax.swing.JPasswordField();
         lblPassword2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));

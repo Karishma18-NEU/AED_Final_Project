@@ -12,17 +12,16 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shalini
+ * @author shali
  */
 public class GuestWorkAreaJPanel extends javax.swing.JPanel {
-
-    private JPanel userProcessContainer;
-    private EcoSystem system;
-    private DB4OUtil dB4OUtil;
 
     /**
      * Creates new form GuestWorkAreaJPanel
      */
+    private JPanel userProcessContainer;
+    private EcoSystem system;
+    private DB4OUtil dB4OUtil;
     public GuestWorkAreaJPanel(JPanel userProcessContainer, EcoSystem system, DB4OUtil dB4OUtil) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -39,34 +38,27 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblHeader = new javax.swing.JLabel();
         btnNgoList = new javax.swing.JButton();
+        btnRehabList = new javax.swing.JButton();
         btnJobApplication = new javax.swing.JButton();
         btnAgencySignup = new javax.swing.JButton();
         btnRaiseIssue = new javax.swing.JButton();
-        btnHelpline = new javax.swing.JButton();
+        lblHeader = new javax.swing.JLabel();
         btnLogout = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        btnRehabList = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
-        setMaximumSize(new java.awt.Dimension(700, 700));
-        setMinimumSize(new java.awt.Dimension(700, 700));
-        setPreferredSize(new java.awt.Dimension(700, 700));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Guest Area");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 250, 27));
-
-        btnNgoList.setText("NGOs of EcoSystem");
+        btnNgoList.setText("Trust of EcoSystem");
         btnNgoList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNgoListActionPerformed(evt);
+                btnTrustListActionPerformed(evt);
             }
         });
-        add(btnNgoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
+
+        btnRehabList.setText("Old Age Home of EcoSystem");
+        btnRehabList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOldAgeHomeListActionPerformed(evt);
+            }
+        });
 
         btnJobApplication.setText("View Jobs");
         btnJobApplication.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +66,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
                 btnJobApplicationActionPerformed(evt);
             }
         });
-        add(btnJobApplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 251, -1));
 
         btnAgencySignup.setText("Sign Up as Funding Agency");
         btnAgencySignup.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +73,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
                 btnAgencySignupActionPerformed(evt);
             }
         });
-        add(btnAgencySignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 251, -1));
 
         btnRaiseIssue.setText("Raise Issue");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
@@ -90,15 +80,10 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
                 btnRaiseIssueActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 251, -1));
 
-        btnHelpline.setText("Helpline");
-        btnHelpline.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHelplineActionPerformed(evt);
-            }
-        });
-        add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 251, -1));
+        lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHeader.setText("Guest Area");
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
@@ -106,24 +91,70 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
                 btnLogoutActionPerformed(evt);
             }
         });
-        add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/others.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 200));
-
-        btnRehabList.setText("Rehabs of EcoSystem");
-        btnRehabList.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRehabListActionPerformed(evt);
-            }
-        });
-        add(btnRehabList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 251, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(btnLogout)
+                .addContainerGap(638, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(200, 361, Short.MAX_VALUE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnNgoList, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnRehabList, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnJobApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnAgencySignup, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnRaiseIssue, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGap(0, 162, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnLogout)
+                .addContainerGap(508, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 72, Short.MAX_VALUE)
+                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(43, 43, 43)
+                    .addComponent(btnNgoList)
+                    .addGap(31, 31, 31)
+                    .addComponent(btnRehabList)
+                    .addGap(31, 31, 31)
+                    .addComponent(btnJobApplication)
+                    .addGap(31, 31, 31)
+                    .addComponent(btnAgencySignup)
+                    .addGap(31, 31, 31)
+                    .addComponent(btnRaiseIssue)
+                    .addGap(0, 142, Short.MAX_VALUE)))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNgoListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNgoListActionPerformed
+    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
         // TODO add your handling code here:
-      
-    }//GEN-LAST:event_btnNgoListActionPerformed
+//        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+//        ViewNGOJPanel vnjp = new ViewNGOJPanel(userProcessContainer, system);
+//        userProcessContainer.add("vnjp", vnjp);
+//        cardLayout.next(userProcessContainer);
+    }//GEN-LAST:event_btnTrustListActionPerformed
+
+    private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
+        // TODO add your handling code here:
+//        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+//        ViewOldAgeHomeJPanel fghj = new ViewRehabJPanel(userProcessContainer, system);
+//        userProcessContainer.add("fghj",fghj);
+//        cardLayout.next(userProcessContainer);
+    }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
 
     private void btnJobApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJobApplicationActionPerformed
         // TODO add your handling code here:
@@ -149,12 +180,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnRaiseIssueActionPerformed
 
-    private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
-        // TODO add your handling code here:
-        
-        
-    }//GEN-LAST:event_btnHelplineActionPerformed
-
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
@@ -163,21 +188,14 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void btnRehabListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRehabListActionPerformed
-        // TODO add your handling code here:
-   
-    }//GEN-LAST:event_btnRehabListActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAgencySignup;
-    private javax.swing.JButton btnHelpline;
     private javax.swing.JButton btnJobApplication;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnNgoList;
     private javax.swing.JButton btnRaiseIssue;
     private javax.swing.JButton btnRehabList;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }
