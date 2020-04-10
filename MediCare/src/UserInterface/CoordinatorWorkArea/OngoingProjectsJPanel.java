@@ -73,6 +73,7 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
         btnAssign = new javax.swing.JButton();
         btnProcess = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");
