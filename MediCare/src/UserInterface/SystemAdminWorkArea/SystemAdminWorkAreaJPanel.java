@@ -147,7 +147,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageStateActionPerformed(evt);
             }
         });
-        add(btnManageState, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 251, -1));
+        add(btnManageState, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 251, -1));
 
         btnManageCountry.setText("Manage Country Network");
         btnManageCountry.addActionListener(new java.awt.event.ActionListener() {
@@ -155,7 +155,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageCountryActionPerformed(evt);
             }
         });
-        add(btnManageCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 251, -1));
+        add(btnManageCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 251, -1));
 
         btnManageCity.setText("Manage City Network");
         btnManageCity.addActionListener(new java.awt.event.ActionListener() {
@@ -163,7 +163,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageCityActionPerformed(evt);
             }
         });
-        add(btnManageCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 251, -1));
+        add(btnManageCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 251, -1));
 
         btnManageNGO.setText("Manage Trust");
         btnManageNGO.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +171,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageNGOActionPerformed(evt);
             }
         });
-        add(btnManageNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 251, -1));
+        add(btnManageNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 251, -1));
 
         btnManageNGOAdmin.setText("Manage Trust Admin");
         btnManageNGOAdmin.addActionListener(new java.awt.event.ActionListener() {
@@ -179,7 +179,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageNGOAdminActionPerformed(evt);
             }
         });
-        add(btnManageNGOAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 251, -1));
+        add(btnManageNGOAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 251, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -192,7 +192,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageRehabilationActionPerformed(evt);
             }
         });
-        add(btnManageRehabilation, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 440, 251, -1));
+        add(btnManageRehabilation, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 251, -1));
 
         btnManageRehabilationAdmin.setText("Manage OldAgeHome Admin");
         btnManageRehabilationAdmin.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +200,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageRehabilationAdminActionPerformed(evt);
             }
         });
-        add(btnManageRehabilationAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 500, 251, -1));
+        add(btnManageRehabilationAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 251, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCountryActionPerformed
@@ -246,8 +246,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void btnManageRehabilationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRehabilationActionPerformed
         // TODO add your handling code here:
         CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        ManageRehabilationJPanel abcd = new ManageRehabilationJPanel(userProcessContainer, system);
-        userProcessContainer.add("abcd",abcd);
+        ManageOldAgeHomeJPanel moaj = new ManageOldAgeHomeJPanel(userProcessContainer, system);
+        userProcessContainer.add("abcd",moaj);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageRehabilationActionPerformed
 
