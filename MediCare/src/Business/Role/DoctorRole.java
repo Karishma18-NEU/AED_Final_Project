@@ -6,6 +6,7 @@ import javax.swing.JPanel;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UserInterface.DoctorWorkArea.DoctorHomeJPanel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

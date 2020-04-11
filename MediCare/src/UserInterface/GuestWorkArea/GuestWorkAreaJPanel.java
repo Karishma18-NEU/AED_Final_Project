@@ -40,14 +40,14 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnNgoList = new javax.swing.JButton();
+        btnTrustList = new javax.swing.JButton();
         btnJobApplication = new javax.swing.JButton();
         btnAgencySignup = new javax.swing.JButton();
         btnRaiseIssue = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnRehabList = new javax.swing.JButton();
+        btnOldAgeHomeList = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -60,13 +60,13 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Guest Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 250, 27));
 
-        btnNgoList.setText("NGOs of EcoSystem");
-        btnNgoList.addActionListener(new java.awt.event.ActionListener() {
+        btnTrustList.setText("Trust of EcoSystem");
+        btnTrustList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNgoListActionPerformed(evt);
+                btnTrustListActionPerformed(evt);
             }
         });
-        add(btnNgoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
+        add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
 
         btnJobApplication.setText("View Jobs");
         btnJobApplication.addActionListener(new java.awt.event.ActionListener() {
@@ -111,19 +111,19 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/others.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 200));
 
-        btnRehabList.setText("Rehabs of EcoSystem");
-        btnRehabList.addActionListener(new java.awt.event.ActionListener() {
+        btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
+        btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRehabListActionPerformed(evt);
+                btnOldAgeHomeListActionPerformed(evt);
             }
         });
-        add(btnRehabList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 251, -1));
+        add(btnOldAgeHomeList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 251, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNgoListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNgoListActionPerformed
+    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
         // TODO add your handling code here:
       
-    }//GEN-LAST:event_btnNgoListActionPerformed
+    }//GEN-LAST:event_btnTrustListActionPerformed
 
     private void btnJobApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJobApplicationActionPerformed
         // TODO add your handling code here:
@@ -163,10 +163,10 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         dB4OUtil.storeSystem(system);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void btnRehabListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRehabListActionPerformed
+    private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
         // TODO add your handling code here:
    
-    }//GEN-LAST:event_btnRehabListActionPerformed
+    }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -174,9 +174,9 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnHelpline;
     private javax.swing.JButton btnJobApplication;
     private javax.swing.JButton btnLogout;
-    private javax.swing.JButton btnNgoList;
+    private javax.swing.JButton btnOldAgeHomeList;
     private javax.swing.JButton btnRaiseIssue;
-    private javax.swing.JButton btnRehabList;
+    private javax.swing.JButton btnTrustList;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables

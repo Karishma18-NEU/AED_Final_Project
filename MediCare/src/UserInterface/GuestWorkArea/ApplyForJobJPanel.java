@@ -110,7 +110,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Country", "State", "City", "NGO", "Job Title"
+                "Country", "State", "City", "Trust", "Job Title"
             }
         ) {
             boolean[] canEdit = new boolean [] {

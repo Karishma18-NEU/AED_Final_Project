@@ -93,7 +93,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
     
      private void populateNGO(){
         
-         cbNGO.removeAllItems();
+         cbTrust.removeAllItems();
          
         if (cbCity.getSelectedItem() != null){
         for (Country c : system.getNetworkList()){
@@ -101,8 +101,8 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
                 for(City city :  s.getCityList()){
                      if(city.equals(cbCity.getSelectedItem())){
                           for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
-                              if(e.getEnterpriseType().getValue().equals("NGO")){
-                                cbNGO.addItem(e);
+                              if(e.getEnterpriseType().getValue().equals("Trust")){
+                                cbTrust.addItem(e);
                               }
                              }
                      }
@@ -128,7 +128,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         txtAreaIssue = new javax.swing.JTextArea();
         btnRaiseIssue = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        cbNGO = new javax.swing.JComboBox();
+        cbTrust = new javax.swing.JComboBox();
         cbCountry = new javax.swing.JComboBox();
         cbCity = new javax.swing.JComboBox();
         cbState = new javax.swing.JComboBox();
@@ -174,8 +174,8 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        cbNGO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(cbNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 150, -1));
+        cbTrust.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(cbTrust, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 150, -1));
 
         cbCountry.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +210,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         lblCity.setText("Select City:");
         add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, -1, 20));
 
-        lblNGO.setText("Select NGO:");
+        lblNGO.setText("Select Trust:");
         add(lblNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -218,7 +218,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
      
        // String country="", state="", city="";
-        Enterprise enterprise = (Enterprise) cbNGO.getSelectedItem();
+        Enterprise enterprise = (Enterprise) cbTrust.getSelectedItem();
                 
         Country country= (Country) cbCountry.getSelectedItem();
         String countryStr = country.toString();
@@ -296,8 +296,8 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnRaiseIssue;
     private javax.swing.JComboBox cbCity;
     private javax.swing.JComboBox cbCountry;
-    private javax.swing.JComboBox cbNGO;
     private javax.swing.JComboBox cbState;
+    private javax.swing.JComboBox cbTrust;
     private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblCountry;

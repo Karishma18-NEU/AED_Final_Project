@@ -97,7 +97,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cbNGO">
+    <Component class="javax.swing.JComboBox" name="cbTrust">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
@@ -218,7 +218,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblNGO">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Select NGO:"/>
+        <Property name="text" type="java.lang.String" value="Select Trust:"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

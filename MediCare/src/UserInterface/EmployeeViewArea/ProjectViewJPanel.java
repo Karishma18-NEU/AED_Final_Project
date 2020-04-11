@@ -43,10 +43,10 @@ public class ProjectViewJPanel extends javax.swing.JPanel {
     }
     public void populateProjectTable() {
         DefaultTableModel model = (DefaultTableModel) tblViewProjects.getModel();
-        if(enterprise.getEnterpriseType().getValue().equals("Rehabilation")){
+        if(enterprise.getEnterpriseType().getValue().equals("Old Age Home")){
             model.setRowCount(0);
             String[] arrOfStr = enterprise.getName().split(" ", 2); 
-            String ent = arrOfStr[0] + " NGO";
+            String ent = arrOfStr[0] + " Trust";
             for(Country network: system.getNetworkList()){
                             for(State s: network.getStateList()){
                                 for(City c: s.getCityList()){
