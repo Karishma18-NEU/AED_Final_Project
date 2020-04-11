@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  *
  * @author Vardhana Bhatt
  */
-public class AdminHomeJPanel extends javax.swing.JPanel {
+public class AminHomeJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form AminHomeJPanel
@@ -31,7 +31,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
     
     
     
-    public AdminHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Enterprise enterprise) {
+    public AminHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Enterprise enterprise) {
         initComponents();
         this.mainContainer = mainContainer;
         this.system = system;
