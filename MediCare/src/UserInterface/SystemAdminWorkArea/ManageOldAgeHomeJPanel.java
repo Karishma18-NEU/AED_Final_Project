@@ -23,14 +23,14 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Karishma
  */
-public class ManageRehabilationJPanel extends javax.swing.JPanel {
+public class ManageOldAgeHomeJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ManageRehabilationJPanel
+     * Creates new form ManageOldAgeHomeJPanel
      */
     private JPanel userProcessContainer;
     EcoSystem system;
-    public ManageRehabilationJPanel(JPanel userProcessContainer, EcoSystem system) {
+    public ManageOldAgeHomeJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;

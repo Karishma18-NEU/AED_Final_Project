@@ -93,7 +93,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
     public void populateEnterpriseType(){
         cbEnterpriseType.removeAllItems();
           for (Enterprise.EnterpriseType type : Enterprise.EnterpriseType.values()) {
-            if(type.getValue().equals("TRUST")){
+            if(type.getValue().equals("Trust")){
                 cbEnterpriseType.addItem(type);
             }
         }
@@ -110,7 +110,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
                 for(City city: s.getCityList()){
                     
                     for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e.getEnterpriseType().getValue().equals("TRUST")){
+                    if(e.getEnterpriseType().getValue().equals("Trust")){
                         Object row[] = new Object[4];
                         row[0] = c;
                         row[1] = s;
