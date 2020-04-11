@@ -173,12 +173,12 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
-            else{
-                ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
-                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-                layout.next(userProcessContainer);
-            }
+//            else{
+//                ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
+//                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+//                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+//                layout.next(userProcessContainer);
+//            }
         }
         else {
             JOptionPane.showMessageDialog(null, "Please assign a task to yourself and then process","Warning", JOptionPane.WARNING_MESSAGE);
