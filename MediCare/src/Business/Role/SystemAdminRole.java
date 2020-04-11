@@ -13,7 +13,7 @@ import UserInterface.SystemAdminWorkArea.SystemAdminHomeJPanel;
 import javax.swing.JPanel;
 /**
  *
- * @author shalini
+ * @author shali
  */
 public class SystemAdminRole extends Role{
     public SystemAdminRole(){

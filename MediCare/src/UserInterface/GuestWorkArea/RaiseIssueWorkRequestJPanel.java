@@ -44,7 +44,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         populateCountry();
         populateState();
         populateCity();
-        populateTrust();
+        populateNGO();
     }
 
      private void populateCountry(){
@@ -91,7 +91,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
        } 
     }
     
-     private void populateTrust(){
+     private void populateNGO(){
         
          cbTrust.removeAllItems();
          
@@ -137,7 +137,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         lblCity = new javax.swing.JLabel();
         lblNGO = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -164,7 +164,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
                 btnRaiseIssueActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 140, -1));
+        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 95, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -287,7 +287,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
     private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
         // TODO add your handling code here:
-         populateTrust();
+         populateNGO();
     }//GEN-LAST:event_cbCityActionPerformed
 
 

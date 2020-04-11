@@ -45,7 +45,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         btnDonation = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -62,7 +62,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnMedicationsActionPerformed(evt);
             }
         });
-        add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 260, -1));
+        add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 182, -1));
 
         btnTreatmentOldAgeHome.setText("Provide Treatment Issue");
         btnTreatmentOldAgeHome.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +70,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnTreatmentOldAgeHomeActionPerformed(evt);
             }
         });
-        add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 260, -1));
+        add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 182, -1));
 
         btnDonation.setText("Donation of Basic Amenities");
         btnDonation.addActionListener(new java.awt.event.ActionListener() {
@@ -78,7 +78,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnDonationActionPerformed(evt);
             }
         });
-        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 260, -1));
+        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 182, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +86,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMedicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicationsActionPerformed

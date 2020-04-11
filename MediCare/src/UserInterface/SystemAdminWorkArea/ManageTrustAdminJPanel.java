@@ -102,7 +102,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
                 for(City city :  s.getCityList()){
                      if(city.equals(cbCity.getSelectedItem())){
                           for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
-                              if(e.getEnterpriseType().getValue().equals("Trust")){
+                              if(e.getEnterpriseType().getValue().equals("TRUST")){
                                 cbNGO.addItem(e);
                             }
                         }
@@ -123,7 +123,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
             for(State s: c.getStateList()){
                 for(City city: s.getCityList()){
                     for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e.getEnterpriseType().getValue().equals("Trust")){
+                    if(e.getEnterpriseType().getValue().equals("TRUST")){
                     for(Organization o: e.getOrganizationDirectory().getOrganizationList()){
                         if(o instanceof  AdminOrganization){
                         for(UserAccount ua: o.getUserAccountDirectory().getUserAccountList()){

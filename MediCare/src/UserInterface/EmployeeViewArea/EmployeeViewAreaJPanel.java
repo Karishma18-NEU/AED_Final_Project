@@ -50,25 +50,25 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnNgoList = new javax.swing.JButton();
+        btnTrustList = new javax.swing.JButton();
         btnRaiseIssue = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         btnProjects = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
         btnViewResolved = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnRehabList = new javax.swing.JButton();
+        btnOldAgeHomeList = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnNgoList.setText("Trusts of EcoSystem");
-        btnNgoList.addActionListener(new java.awt.event.ActionListener() {
+        btnTrustList.setText("Trust of EcoSystem");
+        btnTrustList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTrustListActionPerformed(evt);
             }
         });
-        jPanel1.add(btnNgoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 115, 251, -1));
+        jPanel1.add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 115, 251, -1));
 
         btnRaiseIssue.setText("Raise Issue");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
@@ -108,13 +108,13 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         jPanel1.add(btnViewResolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 251, -1));
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 160));
 
-        btnRehabList.setText("Old Age Home of EcoSystem");
-        btnRehabList.addActionListener(new java.awt.event.ActionListener() {
+        btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
+        btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOldAgeHomeListActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRehabList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 251, -1));
+        jPanel1.add(btnOldAgeHomeList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 251, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -178,10 +178,10 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHelpline;
-    private javax.swing.JButton btnNgoList;
+    private javax.swing.JButton btnOldAgeHomeList;
     private javax.swing.JButton btnProjects;
     private javax.swing.JButton btnRaiseIssue;
-    private javax.swing.JButton btnRehabList;
+    private javax.swing.JButton btnTrustList;
     private javax.swing.JButton btnViewResolved;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

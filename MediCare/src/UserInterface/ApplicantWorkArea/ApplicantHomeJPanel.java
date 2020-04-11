@@ -64,7 +64,7 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        controlJPanel.setBackground(new java.awt.Color(204, 204, 255));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
@@ -93,23 +93,23 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnLogout)
+                .addGap(18, 18, 18))
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnWorkArea, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                     .addComponent(btnViewArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout)
-                .addGap(57, 57, 57))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(20, 20, 20)
                 .addComponent(btnLogout)
-                .addGap(97, 97, 97)
+                .addGap(109, 109, 109)
                 .addComponent(btnWorkArea)
                 .addGap(55, 55, 55)
                 .addComponent(btnViewArea)
@@ -118,7 +118,7 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
 
         splitPane.setLeftComponent(controlJPanel);
 
-        userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
+        userProcessContainer.setBackground(new java.awt.Color(204, 204, 255));
         userProcessContainer.setMaximumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setMinimumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setLayout(new java.awt.CardLayout());

@@ -126,7 +126,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         btnBack = new javax.swing.JButton();
         lblWarning = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -143,7 +143,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
 
         lblAgencyName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblAgencyName.setText("Agency Name:");
-        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(196, 220, 110, 20));
+        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 96, 20));
 
         lblCountry.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCountry.setText("Country:");
@@ -190,7 +190,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
 
         lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnterpriseType.setText("Trust Name:");
-        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 100, 20));
+        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 80, 20));
         add(cbTrustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 150, -1));
 
         btnBack.setText("Back");
