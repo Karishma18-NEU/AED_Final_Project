@@ -49,8 +49,8 @@ public class ViewSeniorCareJPanel extends javax.swing.JPanel {
                 for (SeniorCare senior : enterprise.getSeniorCareDirectory().getSeniorCareList()) {
                     Object[] row = new Object[2];
                     row[0] = senior;
-                    System.out.println(String.valueOf(senior.getAge()));
-                    row[1] = senior.getAge();
+                    System.out.println(String.valueOf(senior.isIllness()));
+                    row[1] = senior.isIllness();
                     model.addRow(row);
                 }
     }
@@ -87,11 +87,11 @@ public class ViewSeniorCareJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Name", "Age"
+                "Name", "Illness"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

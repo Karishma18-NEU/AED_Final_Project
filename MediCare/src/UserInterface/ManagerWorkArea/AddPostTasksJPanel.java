@@ -76,8 +76,8 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("NGO");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, -1, -1));
+        jLabel1.setText("Trust:");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
 
         valueLabel.setText("<value>");
         add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
@@ -102,7 +102,7 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         add(btnPost, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 110, -1));
 
         jLabel3.setText("Task:");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
         add(txtTask, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 206, -1));
 
         btnBack.setText("Back");

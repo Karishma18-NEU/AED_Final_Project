@@ -32,8 +32,8 @@
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtName" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                              <Component id="txtAge" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="txtName" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxIllness" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
@@ -108,12 +108,12 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jCheckBoxIllness" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="submitJButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="435" max="32767" attributes="0"/>
+              <EmptySpace pref="434" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -198,10 +198,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Age of the child:"/>
+        <Property name="text" type="java.lang.String" value="Does the patient have illness ? :"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtAge">
     </Component>
     <Component class="javax.swing.JButton" name="submitJButton">
       <Properties>
@@ -210,6 +208,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitJButtonActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="jCheckBoxIllness">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Illness"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

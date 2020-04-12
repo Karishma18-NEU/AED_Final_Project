@@ -29,7 +29,7 @@ public abstract class WorkRequest {
         Agency("Agency Work Request"), 
         Issue("Issue Work Request"),
         Job("Job Work Request"), 
-        PostTask("Post Task WorkRequest"),
+        PostTask("Post Task Work Request"),
         SeniorCare("SeniorCare Work Request"),
         SeniorMedical("Medication Work Request");
 

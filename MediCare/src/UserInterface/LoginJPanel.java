@@ -97,10 +97,10 @@ public class LoginJPanel extends javax.swing.JPanel {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 13)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("\nContact us:\nEmail address : medicaresystem@gmail.com");
+        jTextArea1.setText(" \n\n  Contact us:\n  Email address : medicaresystem@gmail.com");
         jScrollPane1.setViewportView(jTextArea1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 440, 410, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 410, 110));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed

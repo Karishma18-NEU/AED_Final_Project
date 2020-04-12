@@ -49,7 +49,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         btnManageChildren = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         btnViewChildren = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -69,9 +68,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Doctor Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 270, 26));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/others.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, 130, 200));
 
         btnViewChildren.setText("View Senior Patients");
         btnViewChildren.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +98,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageChildren;
     private javax.swing.JButton btnViewChildren;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

@@ -108,7 +108,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="430" y="440" width="410" height="110"/>
+          <AbsoluteConstraints x="240" y="430" width="410" height="110"/>
         </Constraint>
       </Constraints>
 
@@ -121,7 +121,7 @@
               <Font name="Monospaced" size="13" style="1"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="&#xa;Contact us:&#xa;Email address : medicaresystem@gmail.com"/>
+            <Property name="text" type="java.lang.String" value=" &#xa;&#xa;  Contact us:&#xa;  Email address : medicaresystem@gmail.com"/>
           </Properties>
         </Component>
       </SubComponents>

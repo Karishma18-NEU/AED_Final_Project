@@ -39,6 +39,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     private Organization organization;
     private Enterprise enterprise;
     private PostTaskWorkRequest request;
+    private boolean illness;
    
     public ProcessTreatmentWorkRequestJPanel(JPanel userProcessContainer, EcoSystem system, UserAccount userAccount, Organization organization, PostTaskWorkRequest request) {
         initComponents();
@@ -129,8 +130,8 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        txtAge = new javax.swing.JTextField();
         submitJButton = new javax.swing.JButton();
+        jCheckBoxIllness = new javax.swing.JCheckBox();
 
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -175,7 +176,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
 
         jLabel1.setText("Name of the Patient:");
 
-        jLabel2.setText("Age of the child:");
+        jLabel2.setText("Does the patient have illness ? :");
 
         submitJButton.setText("Send to Senior Care");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -183,6 +184,8 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
                 submitJButtonActionPerformed(evt);
             }
         });
+
+        jCheckBoxIllness.setText("Illness");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -203,7 +206,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jCheckBoxIllness))
                             .addGap(80, 80, 80)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(169, 169, 169)
@@ -259,11 +262,11 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBoxIllness))
                 .addGap(18, 18, 18)
                 .addComponent(submitJButton)
-                .addContainerGap(435, Short.MAX_VALUE))
+                .addContainerGap(434, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -296,7 +299,10 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
         enterprise = (Enterprise) cbTrustName.getSelectedItem();
         String name = txtName.getText();
-        String age = txtAge.getText();
+        if(jCheckBoxIllness.isSelected()){
+            illness = true;
+        }
+        
 
         if(name.equals("")){
             JOptionPane.showMessageDialog(null, "Please enter value name of the senior", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -304,32 +310,32 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
 
         }
 
-        if(age.equals("")){
-            JOptionPane.showMessageDialog(null, "Please enter age of the senior", "Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-
-        }
+//        if(illness.equals(" ")){
+//            JOptionPane.showMessageDialog(null, "Please select if senior has illness", "Warning", JOptionPane.WARNING_MESSAGE);
+//            return;
+//
+//        }
 
         // validate text
         String regex = "^[a-z A-Z 0-9 .]+$";
         Pattern namePattern = Pattern.compile(regex);
         Matcher nameMatcher = namePattern.matcher(name);
 
-        String re = "^[0-9]+$";
-        Pattern agePattern = Pattern.compile(re);
-        Matcher ageMatcher = agePattern.matcher(age);
+//        String re = "^[0-9]+$";
+//        Pattern agePattern = Pattern.compile(re);
+//        Matcher ageMatcher = agePattern.matcher(age);
 
         if(!nameMatcher.matches()){
             JOptionPane.showMessageDialog(null, "Invalid characters in name", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
-        if(!ageMatcher.matches()){
-            JOptionPane.showMessageDialog(null, "Invalid number in age", "Warning", JOptionPane.WARNING_MESSAGE);
-            return;
-        }
+//        if(!ageMatcher.matches()){
+//            JOptionPane.showMessageDialog(null, "Invalid number in age", "Warning", JOptionPane.WARNING_MESSAGE);
+//            return;
+//        }
 
-        int ag = Integer.parseInt(age);
+//        int ag = Integer.parseInt(age);
 
         request.setWorkDone("Sent to Care");
         request.setStatus("Completed");
@@ -337,7 +343,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         SeniorCareWorkRequest req = new SeniorCareWorkRequest();
         SeniorCare senior = new SeniorCare();
         senior.setName(name);
-        senior.setAge(ag);
+        senior.setIllness(illness);
         senior.setCountry(cbCountry.getSelectedItem().toString());
         senior.setState(cbState.getSelectedItem().toString());
         senior.setCity(cbCity.getSelectedItem().toString());
@@ -352,7 +358,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
 
         JOptionPane.showMessageDialog(null, "Request successfully sent to SeniorCare", "Information", JOptionPane.INFORMATION_MESSAGE);
         txtName.setText("");
-        txtAge.setText("");
+//        jComboBoxIllness.setText("");
     }//GEN-LAST:event_submitJButtonActionPerformed
 
 
@@ -362,6 +368,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<Object> cbCountry;
     private javax.swing.JComboBox<Object> cbState;
     private javax.swing.JComboBox cbTrustName;
+    private javax.swing.JCheckBox jCheckBoxIllness;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblCity;
@@ -370,7 +377,6 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblState;
     private javax.swing.JButton submitJButton;
-    private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

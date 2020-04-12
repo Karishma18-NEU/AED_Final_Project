@@ -45,13 +45,13 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
     
     public void populateViewCoordinatorTable() {
         
-        DefaultTableModel model = (DefaultTableModel) tblViewVolunteers.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblViewCoordinators.getModel();
 
         model.setRowCount(0);
                 for (SeniorCare senior : enterprise.getSeniorCareDirectory().getSeniorCareList()) {
                     Object[] row = new Object[2];
                     row[0] = senior;
-                    row[1] = senior.getAge();
+                    row[1] = senior.isIllness();
                     model.addRow(row);
                 }
     }
@@ -68,7 +68,7 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblViewVolunteers = new javax.swing.JTable();
+        tblViewCoordinators = new javax.swing.JTable();
         submitJButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -84,23 +84,23 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Send Seniors for Treatment");
 
-        tblViewVolunteers.setModel(new javax.swing.table.DefaultTableModel(
+        tblViewCoordinators.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Name", "Age"
+                "Name", "Illness"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblViewVolunteers);
+        jScrollPane1.setViewportView(tblViewCoordinators);
 
         submitJButton.setText("Send for Treatment");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -150,20 +150,20 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        int selectedRow = tblViewVolunteers.getSelectedRow();
+        int selectedRow = tblViewCoordinators.getSelectedRow();
         if (selectedRow >= 0) {
-            SeniorCare senior = (SeniorCare) tblViewVolunteers.getValueAt(selectedRow, 0);
+            SeniorCare senior = (SeniorCare) tblViewCoordinators.getValueAt(selectedRow, 0);
             String name = senior.getName();
-            int age = senior.getAge();
+            boolean illness = senior.isIllness();
 
-            if(senior.getAge() > 5){
+            if(senior.isIllness() == true){
                 enterprise.getSeniorCareDirectory().removeSeniorCare(senior);
                 populateViewCoordinatorTable();
 
                 SeniorMedicalWorkRequest req = new SeniorMedicalWorkRequest();
                 SeniorMedical seniors = new SeniorMedical();
                 seniors.setName(name);
-                seniors.setAge(age);
+                seniors.setIllness(illness);
                 seniors.setStatus(true);
                 req.setSenior(seniors);
 
@@ -189,6 +189,6 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JButton submitJButton;
-    private javax.swing.JTable tblViewVolunteers;
+    private javax.swing.JTable tblViewCoordinators;
     // End of variables declaration//GEN-END:variables
 }

@@ -50,7 +50,7 @@ public class ManageSeniorCareJPanel extends javax.swing.JPanel {
                 if (((SeniorCareWorkRequest) request).getSenior().isStatus() == true) {
                     Object[] row = new Object[3];
                     row[0] = (SeniorCareWorkRequest) request;
-                    row[1] = ((SeniorCareWorkRequest) request).getSenior().getAge();
+                    row[1] = ((SeniorCareWorkRequest) request).getSenior().isIllness();
                     model.addRow(row);
                 }
             }
@@ -79,11 +79,11 @@ public class ManageSeniorCareJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Name", "Age"
+                "Name", "Illness"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -167,11 +167,11 @@ public class ManageSeniorCareJPanel extends javax.swing.JPanel {
         //Updating account and account directory
         SeniorCare senior = new SeniorCare();
         senior.setName(seniorRequest.getSenior().getName());
-        senior.setAge(seniorRequest.getSenior().getAge());
+        senior.setIllness(seniorRequest.getSenior().isIllness());
         enterprise.getSeniorCareDirectory().getSeniorCareList().add(senior);
         System.out.println(enterprise.getSeniorCareDirectory().getSeniorCareList().size());
 
-        system.getSeniorCareDirectory().createSeniorCare(seniorRequest.getSenior().getName(), seniorRequest.getSenior().getAge(), seniorRequest.getSenior().isIllness());
+        system.getSeniorCareDirectory().createSeniorCare(seniorRequest.getSenior().getName(), seniorRequest.getSenior().isIllness());
         System.out.println(system.getSeniorCareDirectory().getSeniorCareList().size());
         //set agency status to false ie amount =0
         seniorRequest.getSenior().setStatus(false);

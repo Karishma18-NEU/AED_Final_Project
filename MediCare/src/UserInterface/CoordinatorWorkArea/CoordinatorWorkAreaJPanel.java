@@ -48,6 +48,7 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btnOngoingProjects = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N

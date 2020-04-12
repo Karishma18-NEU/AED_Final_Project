@@ -112,8 +112,8 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
         cbOrg = new javax.swing.JComboBox();
         lblEmp = new javax.swing.JLabel();
         cbEmp = new javax.swing.JComboBox();
-        lblRole = new javax.swing.JLabel();
         cbRole = new javax.swing.JComboBox();
+        lblRole = new javax.swing.JLabel();
         lblUserName = new javax.swing.JLabel();
         txtFldUserName = new javax.swing.JTextField();
         lblPassword = new javax.swing.JLabel();
@@ -175,9 +175,9 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
             }
         });
 
-        lblRole.setText("Role");
-
         cbRole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblRole.setText("Role");
 
         lblUserName.setText("User Name");
 
