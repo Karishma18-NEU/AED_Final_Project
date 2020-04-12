@@ -9,7 +9,7 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import UserInterface.AdminWorkArea.AminHomeJPanel;
+import UserInterface.AdminWorkArea.AdminHomeJPanel;
 import javax.swing.JPanel;
 
 /**
@@ -23,6 +23,6 @@ public class AdminRole extends Role{
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, EcoSystem business, DB4OUtil dB4OUtil, UserAccount userAccount, Organization organization, Enterprise enterprise) {
-        return new AminHomeJPanel(userProcessContainer, business, dB4OUtil, userAccount, enterprise);
+        return new AdminHomeJPanel(userProcessContainer, business, dB4OUtil, userAccount, enterprise);
     }
 }
