@@ -52,7 +52,7 @@ public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
                 if ((( SeniorMedicalWorkRequest) request).getSenior().isStatus() == true) {
                     Object[] row = new Object[3];
                     row[0] = (SeniorMedicalWorkRequest) request;
-                    row[1] = (( SeniorMedicalWorkRequest) request).getSenior().getAge();
+                    row[1] = (( SeniorMedicalWorkRequest) request).getSenior().isIllness();
                     model.addRow(row);
                 }
             }
@@ -97,7 +97,7 @@ public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Name", "Age"
+                "Name", "Illness"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -119,19 +119,18 @@ public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
                         .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(94, 94, 94)
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(474, 474, 474)
-                        .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(95, Short.MAX_VALUE))
+                        .addGap(131, 131, 131)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,11 +141,11 @@ public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(80, 80, 80)
+                .addGap(79, 79, 79)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
+                .addGap(18, 18, 18)
                 .addComponent(btnAccept, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(308, Short.MAX_VALUE))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -185,14 +184,14 @@ public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
         //Updating account and account directory
         SeniorMedical senior = new SeniorMedical ();
         senior.setName(seniorRequest.getSenior().getName());
-        senior.setAge(seniorRequest.getSenior().getAge());
+        senior.setIllness(seniorRequest.getSenior().isIllness());
         enterprise.getSeniorMedicalDirectory().getseniorMedicalList().add(senior);
 
         //FosterCareChildren children = new FosterCareChildren();
         //children.setName(childRequest.getChild().getName());
         //enterprise.getFosterCareDirectory().getFosterCareChildrenList().remove(children);
 
-        system.getSeniorMedicalDirectory().createSeniorMedical(seniorRequest.getSenior().getName(), seniorRequest.getSenior().getAge(),seniorRequest.getSenior().isIllness());
+        system.getSeniorMedicalDirectory().createSeniorMedical(seniorRequest.getSenior().getName(), seniorRequest.getSenior().isIllness());
         //system.getFosterCareDirectory().removeFosterCareChildren(children);
         //set agency status to false ie amount =0
         seniorRequest.getSenior().setStatus(false);

@@ -25,10 +25,9 @@ public class SeniorMedicalDirectory {
         this.seniorMedicalList = seniorMedicalList;
     }
     
-    public SeniorMedical createSeniorMedical(String name, int age, boolean illness){
+    public SeniorMedical createSeniorMedical(String name, boolean illness){
         SeniorMedical senior = new SeniorMedical();
         senior.setName(name);
-        senior.setAge(age);
         senior.setIllness(illness);
         senior.setStatus(false);
         seniorMedicalList.add(senior);
