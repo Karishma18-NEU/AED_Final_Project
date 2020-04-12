@@ -51,7 +51,7 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
                 for (SeniorCare senior : enterprise.getSeniorCareDirectory().getSeniorCareList()) {
                     Object[] row = new Object[2];
                     row[0] = senior;
-                    row[1] = senior.getAge();
+                    row[1] = senior.isIllness();
                     model.addRow(row);
                 }
     }
@@ -89,11 +89,11 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Name", "Age"
+                "Name", "Illness"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, true
+                false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -154,16 +154,16 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
         if (selectedRow >= 0) {
             SeniorCare senior = (SeniorCare) tblViewCoordinators.getValueAt(selectedRow, 0);
             String name = senior.getName();
-            int age = senior.getAge();
+            boolean illness = senior.isIllness();
 
-            if(senior.getAge() > 5){
+            if(senior.isIllness() == true){
                 enterprise.getSeniorCareDirectory().removeSeniorCare(senior);
                 populateViewCoordinatorTable();
 
                 SeniorMedicalWorkRequest req = new SeniorMedicalWorkRequest();
                 SeniorMedical seniors = new SeniorMedical();
                 seniors.setName(name);
-                seniors.setAge(age);
+                seniors.setIllness(illness);
                 seniors.setStatus(true);
                 req.setSenior(seniors);
 

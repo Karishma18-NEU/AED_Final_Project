@@ -16,7 +16,6 @@ public class SeniorCare {
     private String country;
     private String state, city;
     private String name;
-    private int age;
     private boolean illness;
     
     public SeniorCare(){
@@ -66,14 +65,6 @@ public class SeniorCare {
 
     public void setCity(String city) {
         this.city = city;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public boolean isIllness() {
