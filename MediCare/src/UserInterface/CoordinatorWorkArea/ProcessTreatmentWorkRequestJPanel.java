@@ -133,6 +133,8 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         submitJButton = new javax.swing.JButton();
         jCheckBoxIllness = new javax.swing.JCheckBox();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
