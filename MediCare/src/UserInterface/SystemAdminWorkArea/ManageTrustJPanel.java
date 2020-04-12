@@ -134,7 +134,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAddNGO = new javax.swing.JButton();
+        btnAddTrust = new javax.swing.JButton();
         btnDeleteNGO = new javax.swing.JButton();
         lblCountry = new javax.swing.JLabel();
         cbCountry = new javax.swing.JComboBox();
@@ -158,13 +158,13 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         setName(""); // NOI18N
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAddNGO.setText("Add NGO");
-        btnAddNGO.addActionListener(new java.awt.event.ActionListener() {
+        btnAddTrust.setText("Add Trust");
+        btnAddTrust.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddNGOActionPerformed(evt);
+                btnAddTrustActionPerformed(evt);
             }
         });
-        add(btnAddNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, 90, 30));
+        add(btnAddTrust, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, 90, 30));
 
         btnDeleteNGO.setText("Delete TRUST");
         btnDeleteNGO.addActionListener(new java.awt.event.ActionListener() {
@@ -258,7 +258,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 450, 26));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddNGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNGOActionPerformed
+    private void btnAddTrustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddTrustActionPerformed
         // TODO add your handling code here:     
           String name = txtFldName.getText();
           Country country = (Country) cbCountry.getSelectedItem();
@@ -293,7 +293,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         }else{
             JOptionPane.showMessageDialog(null, "Please enter text", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_btnAddNGOActionPerformed
+    }//GEN-LAST:event_btnAddTrustActionPerformed
 
     private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
         // TODO add your handling code here:
@@ -367,7 +367,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAddNGO;
+    private javax.swing.JButton btnAddTrust;
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDeleteNGO;
     private javax.swing.JComboBox cbCity;
