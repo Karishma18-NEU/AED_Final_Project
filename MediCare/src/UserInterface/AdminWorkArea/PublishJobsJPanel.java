@@ -139,6 +139,12 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
 
         lblName.setText("Job Title:");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
+
+        txtFldName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFldNameActionPerformed(evt);
+            }
+        });
         add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
 
         btnSubmit.setText("Submit");
@@ -219,6 +225,10 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter text", "Warning", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void txtFldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFldNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFldNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

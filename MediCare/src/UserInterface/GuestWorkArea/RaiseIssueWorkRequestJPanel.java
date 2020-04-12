@@ -44,7 +44,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         populateCountry();
         populateState();
         populateCity();
-        populateNGO();
+        populateTrust();
     }
 
      private void populateCountry(){
@@ -91,7 +91,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
        } 
     }
     
-     private void populateNGO(){
+     private void populateTrust(){
         
          cbTrust.removeAllItems();
          
@@ -137,7 +137,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         lblCity = new javax.swing.JLabel();
         lblNGO = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -229,7 +229,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         String desc = txtAreaIssue.getText();
         
         if(desc.equals("")){
-            JOptionPane.showMessageDialog(null, "Please enter issue description", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Please enter description", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         
@@ -264,7 +264,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
             userAccount.getWorkQueue().getWorkRequestList().add(request);
         }
         txtAreaIssue.setText("");
-        JOptionPane.showMessageDialog(null, "Issue request submitted successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Request submitted successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_btnRaiseIssueActionPerformed
 
@@ -287,7 +287,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
     private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
         // TODO add your handling code here:
-         populateNGO();
+         populateTrust();
     }//GEN-LAST:event_cbCityActionPerformed
 
 

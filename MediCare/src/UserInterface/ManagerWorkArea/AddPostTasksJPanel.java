@@ -86,6 +86,11 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         cbProjectName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbProjectName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbProjectNameActionPerformed(evt);
+            }
+        });
         add(cbProjectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 149, -1));
 
         btnPost.setText("Post");
@@ -163,6 +168,10 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void cbProjectNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProjectNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbProjectNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

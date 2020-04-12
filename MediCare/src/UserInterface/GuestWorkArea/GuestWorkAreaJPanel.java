@@ -46,10 +46,9 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         btnRaiseIssue = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         btnOldAgeHomeList = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setPreferredSize(new java.awt.Dimension(700, 700));
@@ -107,9 +106,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/others.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 200));
 
         btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
         btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +173,6 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnOldAgeHomeList;
     private javax.swing.JButton btnRaiseIssue;
     private javax.swing.JButton btnTrustList;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

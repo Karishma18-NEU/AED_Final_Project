@@ -173,7 +173,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnterpriseType.setText("Trust Name:");
 
-        jLabel1.setText("Name of the child:");
+        jLabel1.setText("Name of the Patient:");
 
         jLabel2.setText("Age of the child:");
 

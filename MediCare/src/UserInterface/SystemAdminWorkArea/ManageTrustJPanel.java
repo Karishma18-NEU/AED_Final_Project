@@ -158,8 +158,9 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         setName(""); // NOI18N
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAddTrust.setText("Add Trust");
-        btnAddTrust.addActionListener(new java.awt.event.ActionListener() {
+        btnAddNGO.setText("Add Trust");
+        btnAddNGO.addActionListener(new java.awt.event.ActionListener() {
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddTrustActionPerformed(evt);
             }

@@ -167,18 +167,20 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
         {
             request.setStatus("Processing");
 
-            if(request.getProject().getName().equals("Treatment Senior")){
+            if(request.getProject().getName().equals("Provide Treatment")){
                 ProcessTreatmentWorkRequestJPanel processWorkRequestJPanel = new ProcessTreatmentWorkRequestJPanel(userProcessContainer, system, userAccount, organization, request);
                 userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
-//            else{
-//                ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
-//                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-//                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//                layout.next(userProcessContainer);
-//            }
+
+            //else{
+               // ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
+                //userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+                //CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                //layout.next(userProcessContainer);
+            //}
+
         }
         else {
             JOptionPane.showMessageDialog(null, "Please assign a task to yourself and then process","Warning", JOptionPane.WARNING_MESSAGE);

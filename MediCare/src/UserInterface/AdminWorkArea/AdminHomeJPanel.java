@@ -17,10 +17,10 @@ import javax.swing.JPanel;
  *
  * @author Vardhana Bhatt
  */
-public class AminHomeJPanel extends javax.swing.JPanel {
+public class AdminHomeJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AminHomeJPanel
+     * Creates new form AdminHomeJPanel
      */
     private JPanel mainContainer;
     private EcoSystem system;
@@ -31,7 +31,7 @@ public class AminHomeJPanel extends javax.swing.JPanel {
     
     
     
-    public AminHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Enterprise enterprise) {
+    public AdminHomeJPanel(JPanel mainContainer, EcoSystem system, DB4OUtil dB4OUtil, UserAccount userAccount, Enterprise enterprise) {
         initComponents();
         this.mainContainer = mainContainer;
         this.system = system;
@@ -40,7 +40,7 @@ public class AminHomeJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         
         try{
-        if(enterprise.getEnterpriseType().getValue().equals("NGO")){
+        if(enterprise.getEnterpriseType().getValue().equals("Trust")){
             CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
             AdminWorkAreaJPanel awajp = new AdminWorkAreaJPanel(userProcessContainer, userAccount, enterprise, system);
             userProcessContainer.add("awajp", awajp);

@@ -44,7 +44,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
         populateCountry();
         populateState();
         populateCity();
-        populateNGO();
+        populateTrust();
         populateTable();
     }
 
@@ -92,7 +92,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
        } 
     }
     
-     private void populateNGO(){
+     private void populateTrust(){
         
          cbNGO.removeAllItems();
          
@@ -102,7 +102,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
                 for(City city :  s.getCityList()){
                      if(city.equals(cbCity.getSelectedItem())){
                           for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
-                              if(e.getEnterpriseType().getValue().equals("TRUST")){
+                              if(e.getEnterpriseType().getValue().equals("Trust")){
                                 cbNGO.addItem(e);
                             }
                         }
@@ -123,7 +123,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
             for(State s: c.getStateList()){
                 for(City city: s.getCityList()){
                     for(Enterprise e: city.getEnterpriseDirectory().getEnterpriseList()){
-                    if(e.getEnterpriseType().getValue().equals("TRUST")){
+                    if(e.getEnterpriseType().getValue().equals("Trust")){
                     for(Organization o: e.getOrganizationDirectory().getOrganizationList()){
                         if(o instanceof  AdminOrganization){
                         for(UserAccount ua: o.getUserAccountDirectory().getUserAccountList()){
@@ -340,7 +340,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
 
     private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
         // TODO add your handling code here:
-        populateNGO();
+        populateTrust();
     }//GEN-LAST:event_cbCityActionPerformed
 
     private void btnSubmit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmit1ActionPerformed
