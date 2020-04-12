@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package Business.Organization;
-import Business.Role.DoctorRole;
-import Business.Role.GuestRole;
+import Business.Role.CareTakerRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -22,7 +21,7 @@ public SeniorCareOrganization() {
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new DoctorRole());
+        roles.add(new CareTakerRole());
         return roles;
     }
     
