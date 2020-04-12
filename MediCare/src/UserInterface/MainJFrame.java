@@ -46,6 +46,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        mainContainer.setBackground(new java.awt.Color(255, 255, 255));
         mainContainer.setMaximumSize(new java.awt.Dimension(900, 900));
         mainContainer.setMinimumSize(new java.awt.Dimension(900, 900));
         mainContainer.setLayout(new java.awt.CardLayout());

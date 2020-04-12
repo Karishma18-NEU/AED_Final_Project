@@ -120,6 +120,8 @@ public class ManageOldAgeHomeEmployeeUserAccountJPanel extends javax.swing.JPane
         txtFldPassword = new javax.swing.JTextField();
         btnAddAccount = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

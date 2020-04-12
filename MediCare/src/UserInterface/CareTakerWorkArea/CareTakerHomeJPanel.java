@@ -61,6 +61,8 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +115,7 @@ public class CareTakerHomeJPanel extends javax.swing.JPanel {
 
         jSplitPane1.setLeftComponent(jPanel1);
 
+        userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
         userProcessContainer.setLayout(new java.awt.CardLayout());
         jSplitPane1.setRightComponent(userProcessContainer);
 

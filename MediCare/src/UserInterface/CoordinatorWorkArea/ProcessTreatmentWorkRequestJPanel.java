@@ -133,6 +133,8 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
         submitJButton = new javax.swing.JButton();
         jCheckBoxIllness = new javax.swing.JCheckBox();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,39 +305,22 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
             illness = true;
         }
         
-
         if(name.equals("")){
             JOptionPane.showMessageDialog(null, "Please enter value name of the senior", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
 
         }
 
-//        if(illness.equals(" ")){
-//            JOptionPane.showMessageDialog(null, "Please select if senior has illness", "Warning", JOptionPane.WARNING_MESSAGE);
-//            return;
-//
-//        }
-
         // validate text
         String regex = "^[a-z A-Z 0-9 .]+$";
         Pattern namePattern = Pattern.compile(regex);
         Matcher nameMatcher = namePattern.matcher(name);
 
-//        String re = "^[0-9]+$";
-//        Pattern agePattern = Pattern.compile(re);
-//        Matcher ageMatcher = agePattern.matcher(age);
 
         if(!nameMatcher.matches()){
             JOptionPane.showMessageDialog(null, "Invalid characters in name", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-
-//        if(!ageMatcher.matches()){
-//            JOptionPane.showMessageDialog(null, "Invalid number in age", "Warning", JOptionPane.WARNING_MESSAGE);
-//            return;
-//        }
-
-//        int ag = Integer.parseInt(age);
 
         request.setWorkDone("Sent to Care");
         request.setStatus("Completed");
@@ -358,7 +343,7 @@ public class ProcessTreatmentWorkRequestJPanel extends javax.swing.JPanel {
 
         JOptionPane.showMessageDialog(null, "Request successfully sent to SeniorCare", "Information", JOptionPane.INFORMATION_MESSAGE);
         txtName.setText("");
-//        jComboBoxIllness.setText("");
+        
     }//GEN-LAST:event_submitJButtonActionPerformed
 
 

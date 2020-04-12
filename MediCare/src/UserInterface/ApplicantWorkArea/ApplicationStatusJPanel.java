@@ -69,7 +69,7 @@ public class ApplicationStatusJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btnBack2 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblJobWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
