@@ -55,9 +55,8 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         btnViewJobs = new javax.swing.JButton();
         btnRaiseIssue = new javax.swing.JButton();
         btnViewApplications = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -96,9 +95,6 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewApplications, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 175, 217, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/others.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 200));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewJobsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewJobsActionPerformed
@@ -130,7 +126,6 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnRaiseIssue;
     private javax.swing.JButton btnViewApplications;
     private javax.swing.JButton btnViewJobs;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblHi;
     private javax.swing.JLabel lblName;
