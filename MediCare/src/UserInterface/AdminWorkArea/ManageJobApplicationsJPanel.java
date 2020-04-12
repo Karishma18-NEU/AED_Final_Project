@@ -169,7 +169,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
                         system.getJobDirectory().removeJob(job);
 
                         break;
-                    } else if (org instanceof CampaignOrganization && job.getName().equalsIgnoreCase("volunteer")) {
+                    } else if (org instanceof CampaignOrganization && job.getName().equalsIgnoreCase("Coordinator")) {
                         Employee employee = enterprise.getEmployeeDirectory().createEmployee(ua.getApplicant().getName());
                         org.getEmployeeDirectory().createEmployee(ua.getApplicant().getName());
                         enterprise.getEmployeeDirectory().getEmployeeList().add(employee);

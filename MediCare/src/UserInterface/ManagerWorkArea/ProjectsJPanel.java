@@ -142,7 +142,12 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         lblHeader.setText("Projects");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 220, 26));
 
-        cbName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Child Labour", "Child Adoption", "Donation of Basic Amenities"}));
+        cbName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Provide Medication", "Provide Treatment", "Donate Basic Amenities"}));
+        cbName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbNameActionPerformed(evt);
+            }
+        });
         add(cbName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
@@ -221,6 +226,10 @@ public class ProjectsJPanel extends javax.swing.JPanel {
 
         populateProjectTable();
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void cbNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbNameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

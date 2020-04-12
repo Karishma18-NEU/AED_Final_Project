@@ -51,7 +51,6 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         btnAccount = new javax.swing.JButton();
         btnViewVolunteers = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -111,10 +110,6 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manager Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 220, 26));
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/manager.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 160, 190));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageFundingAgenciesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFundingAgenciesActionPerformed
@@ -173,7 +168,6 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnProjects;
     private javax.swing.JButton btnViewIssues;
     private javax.swing.JButton btnViewVolunteers;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

@@ -74,7 +74,7 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         tblViewIssues = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
         setMinimumSize(new java.awt.Dimension(700, 700));
         setName(""); // NOI18N
@@ -102,7 +102,7 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Issue", "Description", "Country", "State", "City", "Sender", "Status"
+                "Request", "Description", "Country", "State", "City", "Sender", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
