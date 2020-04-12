@@ -64,7 +64,7 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(204, 204, 255));
+        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
@@ -118,7 +118,7 @@ public class ApplicantHomeJPanel extends javax.swing.JPanel {
 
         splitPane.setLeftComponent(controlJPanel);
 
-        userProcessContainer.setBackground(new java.awt.Color(204, 204, 255));
+        userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
         userProcessContainer.setMaximumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setMinimumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setLayout(new java.awt.CardLayout());

@@ -123,7 +123,7 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
 
         splitPane.setLeftComponent(controlJPanel);
 
-        userProcessContainer.setBackground(new java.awt.Color(204, 204, 255));
+        userProcessContainer.setBackground(new java.awt.Color(255, 255, 255));
         userProcessContainer.setMaximumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setMinimumSize(new java.awt.Dimension(700, 700));
         userProcessContainer.setOpaque(false);

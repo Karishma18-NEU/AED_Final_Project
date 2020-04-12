@@ -43,7 +43,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         btnNgoList = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
