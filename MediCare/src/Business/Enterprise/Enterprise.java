@@ -23,7 +23,7 @@ public abstract class Enterprise extends Organization {
     
     public enum EnterpriseType{
         Trust("Trust"),
-        OldAgeHome("Old Age Home");
+        OldAgeHome("OldAgeHome");
         private String value;
 
         private EnterpriseType(String value) {
