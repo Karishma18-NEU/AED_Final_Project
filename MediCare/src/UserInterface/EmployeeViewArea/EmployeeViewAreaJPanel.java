@@ -10,7 +10,10 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import UserInterface.GuestWorkArea.HelplineJPanel;
 import UserInterface.GuestWorkArea.RaiseIssueJPanel;
+import UserInterface.GuestWorkArea.ViewOldAgeHomeJPanel;
+import UserInterface.GuestWorkArea.ViewTrustJPanel;
 import java.awt.CardLayout;
 import static java.time.Clock.system;
 import javax.swing.JPanel;
@@ -140,7 +143,10 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
 
     private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
         // TODO add your handling code here:
-      
+       CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ViewTrustJPanel vnjp = new ViewTrustJPanel(userProcessContainer, system);
+        userProcessContainer.add("vnjp",vnjp);
+        cardLayout.next(userProcessContainer); 
     }//GEN-LAST:event_btnTrustListActionPerformed
 
     private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed
@@ -162,17 +168,27 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
 
     private void btnViewResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewResolvedActionPerformed
         // TODO add your handling code here:
+        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ViewResolvedIssuesStatisticsJPanel vrisjp = new ViewResolvedIssuesStatisticsJPanel(userProcessContainer, system, userAccount, enterprise);
+        userProcessContainer.add("vrisjp",vrisjp);
+        cardLayout.next(userProcessContainer);
         
     }//GEN-LAST:event_btnViewResolvedActionPerformed
 
     private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
         // TODO add your handling code here:
-        
+        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ViewOldAgeHomeJPanel oahj = new ViewOldAgeHomeJPanel(userProcessContainer, system);
+        userProcessContainer.add("oahj",oahj);
+        cardLayout.next(userProcessContainer); 
     }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
 
     private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
         // TODO add your handling code here:
-
+      CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+        HelplineJPanel hjp = new HelplineJPanel(userProcessContainer);
+        userProcessContainer.add("hjp",hjp);
+        cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnHelplineActionPerformed
 
 
