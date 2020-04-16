@@ -174,10 +174,10 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
                 layout.next(userProcessContainer);
             }
             else{
-//                ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
-//                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-//                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-//                layout.next(userProcessContainer);
+                ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
+                userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
             }
         }
         else {
