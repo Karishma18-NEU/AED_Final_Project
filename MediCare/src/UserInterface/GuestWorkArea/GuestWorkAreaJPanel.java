@@ -118,7 +118,10 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
         // TODO add your handling code here:
-      
+      CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ViewTrustJPanel vnjp = new ViewTrustJPanel(userProcessContainer, system);
+        userProcessContainer.add("vnjp", vnjp);
+        cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnTrustListActionPerformed
 
     private void btnJobApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJobApplicationActionPerformed
@@ -147,6 +150,10 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
         // TODO add your handling code here:
+         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        HelplineJPanel hjp = new HelplineJPanel(userProcessContainer);
+        userProcessContainer.add("hjp", hjp);
+        cardLayout.next(userProcessContainer);
         
         
     }//GEN-LAST:event_btnHelplineActionPerformed
@@ -161,7 +168,10 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
 
     private void btnOldAgeHomeListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOldAgeHomeListActionPerformed
         // TODO add your handling code here:
-   
+   CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ViewOldAgeHomeJPanel oahj = new ViewOldAgeHomeJPanel(userProcessContainer, system);
+        userProcessContainer.add("oahj",oahj);
+        cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnOldAgeHomeListActionPerformed
 
 

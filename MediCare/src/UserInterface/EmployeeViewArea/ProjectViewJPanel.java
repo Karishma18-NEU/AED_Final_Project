@@ -43,7 +43,7 @@ public class ProjectViewJPanel extends javax.swing.JPanel {
     }
     public void populateProjectTable() {
         DefaultTableModel model = (DefaultTableModel) tblViewProjects.getModel();
-        if(enterprise.getEnterpriseType().getValue().equals("Old Age Home")){
+        if(enterprise.getEnterpriseType().getValue().equals("OldAgeHome")){
             model.setRowCount(0);
             String[] arrOfStr = enterprise.getName().split(" ", 2); 
             String ent = arrOfStr[0] + " Trust";

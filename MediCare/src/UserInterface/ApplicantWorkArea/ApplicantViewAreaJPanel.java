@@ -7,6 +7,8 @@ package UserInterface.ApplicantWorkArea;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.EcoSystem;
+import UserInterface.GuestWorkArea.HelplineJPanel;
+import UserInterface.GuestWorkArea.ViewTrustJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -40,7 +42,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblHeader = new javax.swing.JLabel();
-        btnNgoList = new javax.swing.JButton();
+        btnTrustList = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -51,13 +53,13 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Applicant view Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 27));
 
-        btnNgoList.setText("NGOs of EcoSystem");
-        btnNgoList.addActionListener(new java.awt.event.ActionListener() {
+        btnTrustList.setText("Trusts of EcoSystem");
+        btnTrustList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNgoListActionPerformed(evt);
+                btnTrustListActionPerformed(evt);
             }
         });
-        add(btnNgoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 251, -1));
+        add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 251, -1));
 
         btnHelpline.setText("Helpline");
         btnHelpline.addActionListener(new java.awt.event.ActionListener() {
@@ -68,18 +70,24 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 251, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnNgoListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNgoListActionPerformed
-      
-    }//GEN-LAST:event_btnNgoListActionPerformed
+    private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
+      CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ViewTrustJPanel vnjp = new ViewTrustJPanel(userProcessContainer, system);
+        userProcessContainer.add("vnjp", vnjp);
+        cardLayout.next(userProcessContainer);
+    }//GEN-LAST:event_btnTrustListActionPerformed
 
     private void btnHelplineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelplineActionPerformed
-        
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        HelplineJPanel hjp = new HelplineJPanel(userProcessContainer);
+        userProcessContainer.add("hjp", hjp);
+        cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btnHelplineActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHelpline;
-    private javax.swing.JButton btnNgoList;
+    private javax.swing.JButton btnTrustList;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }
