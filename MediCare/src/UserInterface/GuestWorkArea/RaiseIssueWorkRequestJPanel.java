@@ -146,7 +146,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 460, 26));
 
         lblIssue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblIssue.setText("Describe the issue:");
+        lblIssue.setText("Description:");
         add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 109, 30));
 
         txtAreaIssue.setColumns(20);
@@ -158,13 +158,13 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 419, -1));
 
-        btnRaiseIssue.setText("Raise Issue");
+        btnRaiseIssue.setText("Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRaiseIssueActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 95, -1));
+        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, 95, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {

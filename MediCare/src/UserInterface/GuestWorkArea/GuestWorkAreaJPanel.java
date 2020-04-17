@@ -83,7 +83,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnAgencySignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 251, -1));
 
-        btnRaiseIssue.setText("Raise Issue");
+        btnRaiseIssue.setText("Raise A Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRaiseIssueActionPerformed(evt);

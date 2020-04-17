@@ -53,7 +53,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Raise An Issue");
+        lblHeader.setText("Raise A Request");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 180, 26));
 
         btnMedications.setText("Provide Medications");

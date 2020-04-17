@@ -61,14 +61,15 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(900, 900));
         setPreferredSize(new java.awt.Dimension(900, 900));
 
+        splitPane.setBackground(new java.awt.Color(255, 255, 255));
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        controlJPanel.setBackground(new java.awt.Color(255, 204, 255));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setPreferredSize(new java.awt.Dimension(200, 200));
@@ -135,7 +136,7 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1531, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

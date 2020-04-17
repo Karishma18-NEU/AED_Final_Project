@@ -61,6 +61,10 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        splitPane.setBackground(new java.awt.Color(255, 255, 255));
+
         controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));

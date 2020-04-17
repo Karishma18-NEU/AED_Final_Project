@@ -80,7 +80,7 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnViewJobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 125, 217, -1));
 
-        btnRaiseIssue.setText("Raise an Issue");
+        btnRaiseIssue.setText("Raise A Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRaiseIssueActionPerformed(evt);

@@ -71,6 +71,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         lblOrgType = new javax.swing.JLabel();
         btnAddOrganization1 = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnBack.setText("Back");

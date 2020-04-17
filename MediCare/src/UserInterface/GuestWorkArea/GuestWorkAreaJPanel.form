@@ -87,7 +87,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnRaiseIssue">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Raise Issue"/>
+        <Property name="text" type="java.lang.String" value="Raise A Request"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRaiseIssueActionPerformed"/>

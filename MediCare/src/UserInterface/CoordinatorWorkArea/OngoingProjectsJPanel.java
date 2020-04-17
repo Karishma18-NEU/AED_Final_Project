@@ -173,9 +173,15 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }
-            else{
+            else if(request.getProject().getName().equals("Provide Medication")){
                 ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, system, userAccount, organization, request);
                 userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+            }
+            else{
+                DonationsJPanel donationsJPanel = new DonationsJPanel(userProcessContainer, request);
+                userProcessContainer.add("donationsJPanel", donationsJPanel);
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 layout.next(userProcessContainer);
             }

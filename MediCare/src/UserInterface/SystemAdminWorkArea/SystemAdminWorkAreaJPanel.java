@@ -129,6 +129,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btnManageRehabilation = new javax.swing.JButton();
         btnManageRehabilationAdmin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -139,7 +140,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jTree.setMinimumSize(new java.awt.Dimension(200, 200));
         jScrollPane1.setViewportView(jTree);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 283, 900));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 900));
 
         btnManageState.setText("Manage State Network");
         btnManageState.addActionListener(new java.awt.event.ActionListener() {
@@ -201,6 +202,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         add(btnManageRehabilationAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 251, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/admin.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 460, 380));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCountryActionPerformed
@@ -268,6 +272,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageRehabilation;
     private javax.swing.JButton btnManageRehabilationAdmin;
     private javax.swing.JButton btnManageState;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTree jTree;
     private javax.swing.JLabel lblHeader;
