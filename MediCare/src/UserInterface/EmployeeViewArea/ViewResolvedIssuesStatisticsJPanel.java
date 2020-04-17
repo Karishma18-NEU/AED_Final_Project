@@ -347,7 +347,6 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         scrollPane = new javax.swing.JScrollPane();
         btnSaveImage = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        btnSendEmail = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -372,14 +371,6 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
             }
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
-
-        btnSendEmail.setText("Send Email");
-        btnSendEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendEmailActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnSendEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 660, 110, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -430,20 +421,10 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendEmailActionPerformed
-        // TODO add your handling code here:
-
-        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        EmailJPanel ejp = new EmailJPanel(userProcessContainer);
-        userProcessContainer.add("ejp", ejp);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnSendEmailActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSaveImage;
-    private javax.swing.JButton btnSendEmail;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JScrollPane scrollPane;
