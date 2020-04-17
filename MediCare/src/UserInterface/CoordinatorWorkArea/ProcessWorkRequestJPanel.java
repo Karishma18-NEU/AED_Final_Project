@@ -5,7 +5,17 @@
  */
 package UserInterface.CoordinatorWorkArea;
 
+import Business.EcoSystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.City;
+import Business.Network.Country;
+import Business.Network.State;
+import Business.Organization.Organization;
+import Business.Organization.SeniorCareOrganization;
+import Business.SeniorCare.SeniorCare;
+import Business.UserAccount.UserAccount;
 import Business.WorkQueue.PostTaskWorkRequest;
+import Business.WorkQueue.SeniorCareWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.util.regex.Matcher;
@@ -22,12 +32,78 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
      * Creates new form ProcessWorkRequestJPanel
      */
     private JPanel userProcessContainer;
+    private EcoSystem system;
+    private UserAccount userAccount;
+    private Organization organization;
+    private Enterprise enterprise;
     private PostTaskWorkRequest request;
+    private boolean medicines;
     
-    public ProcessWorkRequestJPanel (JPanel userProcessContainer,PostTaskWorkRequest request) {
+    public ProcessWorkRequestJPanel (JPanel userProcessContainer, EcoSystem system, UserAccount userAccount, Organization organization, PostTaskWorkRequest request) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
+        this.system = system;
+        this.userAccount = userAccount;
+        this.organization = organization;
         this.request = request;
+        populateCountry();
+        populateState();
+        populateCity();
+        populateEnterpriseType();
+    }
+    
+    private void populateCountry() {
+        cbCountry.removeAllItems();
+        for (Country c : system.getNetworkList()) {
+            cbCountry.addItem(c);
+        }
+    }
+
+    private void populateState() {
+        cbState.removeAllItems();
+        if (cbCountry.getSelectedItem() != null) {
+            for (Country c : system.getNetworkList()) {
+                if (c.equals(cbCountry.getSelectedItem())) {
+                    for (State s : c.getStateList()) {
+                        cbState.addItem(s);
+                    }
+                }
+            }
+        }
+    }
+
+    private void populateCity() {
+        cbCity.removeAllItems();
+        if (cbState.getSelectedItem() != null) {
+            for (Country c : system.getNetworkList()) {
+                for (State s : c.getStateList()) {
+                    if (s.equals(cbState.getSelectedItem())) {
+                        for (City city : s.getCityList()) {
+                            cbCity.addItem(city);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void populateEnterpriseType() {
+        cbTrustName.removeAllItems();
+        if (cbCity.getSelectedItem() != null) {
+            for (Country c : system.getNetworkList()) {
+                for (State s : c.getStateList()) {
+                    for (City city : s.getCityList()) {
+                        if (city.equals(cbCity.getSelectedItem())) {
+                            for (Enterprise e : city.getEnterpriseDirectory().getEnterpriseList()) {
+                                if(e.getEnterpriseType().getValue().equals("OldAgeHome")){
+                                    cbTrustName.addItem(e);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /**
@@ -42,11 +118,21 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        txtWorkDone = new javax.swing.JTextField();
-        submitJButton = new javax.swing.JButton();
+        txtMedicines = new javax.swing.JTextField();
+        lblCountry = new javax.swing.JLabel();
+        cbCountry = new javax.swing.JComboBox<>();
+        lblState = new javax.swing.JLabel();
+        cbState = new javax.swing.JComboBox<>();
+        lblCity = new javax.swing.JLabel();
+        cbCity = new javax.swing.JComboBox<>();
+        lblEnterpriseType = new javax.swing.JLabel();
+        cbTrustName = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        submitJButton1 = new javax.swing.JButton();
+        jCheckBoxMedicines = new javax.swing.JCheckBox();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -54,24 +140,147 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Process Work Request");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 270, 26));
 
-        jLabel1.setText("Work Done:");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 134, 80, 20));
-        add(txtWorkDone, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 330, 80));
+        jLabel1.setText("Medications Required :");
 
-        submitJButton.setText("Submit Result");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        txtMedicines.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                txtMedicinesActionPerformed(evt);
             }
         });
-        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, -1, -1));
+
+        lblCountry.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblCountry.setText("Country:");
+
+        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCountryActionPerformed(evt);
+            }
+        });
+
+        lblState.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblState.setText("State:");
+
+        cbState.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbStateActionPerformed(evt);
+            }
+        });
+
+        lblCity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblCity.setText("City:");
+
+        cbCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCityActionPerformed(evt);
+            }
+        });
+
+        lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblEnterpriseType.setText("Trust Name:");
+
+        jLabel3.setText("Name of the Patient:");
+
+        submitJButton1.setText("Send Medications");
+        submitJButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitJButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(backJButton)
+                .addGap(135, 135, 135)
+                .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(270, 270, 270))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14)
+                                .addComponent(cbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14)
+                                .addComponent(cbState, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14)
+                                .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEnterpriseType, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(cbTrustName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel3)
+                                .addGap(14, 14, 14))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(submitJButton1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jCheckBoxMedicines)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMedicines, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(144, 144, 144))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backJButton)
+                    .addComponent(lblHeader, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCountry, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbCountry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblState, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCity, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblEnterpriseType, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbTrustName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jCheckBoxMedicines)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(txtMedicines, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12)
+                .addComponent(submitJButton1)
+                .addGap(365, 365, 365))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -85,35 +294,97 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        String workDone = txtWorkDone.getText();
-        if(workDone.equals("")){
-            JOptionPane.showMessageDialog(null, "Please enter value for work done", "Warning", JOptionPane.WARNING_MESSAGE);
+    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+        // TODO add your handling code here:
+        populateState();
+    }//GEN-LAST:event_cbCountryActionPerformed
+
+    private void cbStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbStateActionPerformed
+        // TODO add your handling code here:
+        populateCity();
+    }//GEN-LAST:event_cbStateActionPerformed
+
+    private void cbCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCityActionPerformed
+        // TODO add your handling code here:
+        populateEnterpriseType();
+    }//GEN-LAST:event_cbCityActionPerformed
+
+    private void submitJButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButton1ActionPerformed
+        enterprise = (Enterprise) cbTrustName.getSelectedItem();
+        String name = txtName.getText();
+        String medicinesDescription = txtMedicines.getText();
+
+        if(jCheckBoxMedicines.isSelected()){
+            medicines = true;
+        }
+        
+        if(name.equals("")){
+            JOptionPane.showMessageDialog(null, "Please enter value name of the senior", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
+
+        }
+        
+        if(medicinesDescription.equals("")){
+            JOptionPane.showMessageDialog(null, "Please enter description of medicines required by the senior", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+
         }
 
         // validate text
         String regex = "^[a-z A-Z 0-9 .]+$";
         Pattern namePattern = Pattern.compile(regex);
-        Matcher nameMatcher = namePattern.matcher(workDone);
+        Matcher nameMatcher = namePattern.matcher(name);
 
         if(!nameMatcher.matches()){
-            JOptionPane.showMessageDialog(null, "Invalid characters in work done", "Warning", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Invalid characters in name", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
-        request.setWorkDone(workDone);
+        request.setWorkDone("Medicines sent to Care");
         request.setStatus("Completed");
-        txtWorkDone.setText("");
-        JOptionPane.showMessageDialog(null, "Task completed successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_submitJButtonActionPerformed
+
+        SeniorCareWorkRequest req = new SeniorCareWorkRequest();
+        SeniorCare senior = new SeniorCare();
+        senior.setName(name); 
+        senior.setMedicines(medicines);
+        senior.setCountry(cbCountry.getSelectedItem().toString());
+        senior.setState(cbState.getSelectedItem().toString());
+        senior.setCity(cbCity.getSelectedItem().toString());
+        senior.setStatus(true);
+        req.setSenior(senior);
+
+        for(Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+            if (organization instanceof SeniorCareOrganization) {
+                organization.getWorkQueue().getWorkRequestList().add(req);
+            }
+        }
+
+        JOptionPane.showMessageDialog(null, "Medicines successfully sent to SeniorCare", "Information", JOptionPane.INFORMATION_MESSAGE);
+        txtName.setText("");
+        txtMedicines.setText("");
+    }//GEN-LAST:event_submitJButton1ActionPerformed
+
+    private void txtMedicinesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMedicinesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMedicinesActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
+    private javax.swing.JComboBox<Object> cbCity;
+    private javax.swing.JComboBox<Object> cbCountry;
+    private javax.swing.JComboBox<Object> cbState;
+    private javax.swing.JComboBox cbTrustName;
+    private javax.swing.JCheckBox jCheckBoxMedicines;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblCity;
+    private javax.swing.JLabel lblCountry;
+    private javax.swing.JLabel lblEnterpriseType;
     private javax.swing.JLabel lblHeader;
-    private javax.swing.JButton submitJButton;
-    private javax.swing.JTextField txtWorkDone;
+    private javax.swing.JLabel lblState;
+    private javax.swing.JButton submitJButton1;
+    private javax.swing.JTextField txtMedicines;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

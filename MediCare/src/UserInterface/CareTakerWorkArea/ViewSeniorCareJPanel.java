@@ -47,10 +47,11 @@ public class ViewSeniorCareJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tblViewVolunteers.getModel();
         model.setRowCount(0);
                 for (SeniorCare senior : enterprise.getSeniorCareDirectory().getSeniorCareList()) {
-                    Object[] row = new Object[2];
+                    Object[] row = new Object[3];
                     row[0] = senior;
-                    System.out.println(String.valueOf(senior.isIllness()));
+//                    System.out.println(String.valueOf(senior.isIllness()));
                     row[1] = senior.isIllness();
+                    row[2] = senior.isMedicines();
                     model.addRow(row);
                 }
     }
@@ -87,11 +88,11 @@ public class ViewSeniorCareJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Name", "Illness"
+                "Name", "Illness", "Medicines Received"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
