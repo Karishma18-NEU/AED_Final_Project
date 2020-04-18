@@ -347,15 +347,16 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         scrollPane = new javax.swing.JScrollPane();
         btnSaveImage = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
-        btnSendEmail = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         scrollPane.setMaximumSize(new java.awt.Dimension(700, 700));
         scrollPane.setMinimumSize(new java.awt.Dimension(700, 700));
-        jPanel1.add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 66, 700, 577));
+        jPanel1.add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 700, 577));
 
         btnSaveImage.setText("Save as Image");
         btnSaveImage.addActionListener(new java.awt.event.ActionListener() {
@@ -363,7 +364,7 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
                 btnSaveImageActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSaveImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 660, -1, -1));
+        jPanel1.add(btnSaveImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 660, -1, -1));
 
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -372,14 +373,6 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
             }
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
-
-        btnSendEmail.setText("Send Email");
-        btnSendEmail.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSendEmailActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnSendEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 660, 110, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -390,21 +383,17 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(280, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(289, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -430,20 +419,10 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
 
-    private void btnSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSendEmailActionPerformed
-        // TODO add your handling code here:
-
-        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        EmailJPanel ejp = new EmailJPanel(userProcessContainer);
-        userProcessContainer.add("ejp", ejp);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btnSendEmailActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSaveImage;
-    private javax.swing.JButton btnSendEmail;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JScrollPane scrollPane;
