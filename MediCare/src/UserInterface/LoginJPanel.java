@@ -58,25 +58,27 @@ public class LoginJPanel extends javax.swing.JPanel {
         passFld = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
         btnGuestLogin = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 204));
         setMaximumSize(new java.awt.Dimension(900, 900));
         setMinimumSize(new java.awt.Dimension(900, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblUserName.setText("User Name:");
-        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 180, -1, -1));
+        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
 
         lblPassword.setText("Password:");
-        add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, -1, -1));
+        add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, -1, -1));
 
         lblTitel.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         lblTitel.setText("MediCare System");
-        add(lblTitel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 280, -1));
-        add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 120, -1));
-        add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 120, -1));
+        add(lblTitel, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 320, 50));
+        add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 420, 120, -1));
+        add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 460, 120, -1));
 
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +86,7 @@ public class LoginJPanel extends javax.swing.JPanel {
                 btnLoginActionPerformed(evt);
             }
         });
-        add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 150, -1));
+        add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 510, 150, -1));
 
         btnGuestLogin.setText("Sign in as Guest");
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -92,15 +94,20 @@ public class LoginJPanel extends javax.swing.JPanel {
                 btnGuestLoginActionPerformed(evt);
             }
         });
-        add(btnGuestLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 150, -1));
+        add(btnGuestLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 510, 150, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Monospaced", 1, 13)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText(" \n\n  Contact us:\n  Email address : medicaresystem@gmail.com");
-        jScrollPane1.setViewportView(jTextArea1);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LoginPage.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 470, 270));
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 430, 410, 110));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo.png"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("\n  Contact us:\n  Email address : medicaresystem@gmail.com");
+        jScrollPane2.setViewportView(jTextArea2);
+
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 560, 360, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -200,8 +207,10 @@ public class LoginJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuestLogin;
     private javax.swing.JButton btnLogin;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JLabel lblPassword;
     private javax.swing.JLabel lblTitel;
     private javax.swing.JLabel lblUserName;

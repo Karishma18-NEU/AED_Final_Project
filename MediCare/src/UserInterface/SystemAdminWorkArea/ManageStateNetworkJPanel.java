@@ -133,18 +133,18 @@ public class ManageStateNetworkJPanel extends javax.swing.JPanel {
         });
         add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 150, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage State Network");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 370, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 370, 26));
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed

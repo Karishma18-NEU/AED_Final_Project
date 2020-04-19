@@ -92,20 +92,20 @@ public class ApplicationStatusJPanel extends javax.swing.JPanel {
         tblJobWorkRequest.getTableHeader().setReorderingAllowed(false);
         tblScrollPane.setViewportView(tblJobWorkRequest);
 
-        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 73, 480, 178));
+        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 480, 178));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("View Application Status");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 27));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 250, 27));
 
-        btnBack2.setText("Back");
+        btnBack2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBack2ActionPerformed(evt);
             }
         });
-        add(btnBack2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        add(btnBack2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 40, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBack2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack2ActionPerformed

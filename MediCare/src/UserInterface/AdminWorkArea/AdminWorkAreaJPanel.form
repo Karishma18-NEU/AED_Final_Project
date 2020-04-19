@@ -21,16 +21,18 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lblHeader" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="btnManageOrganization" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="btnPublishJobs" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="btnManageJobApplications" min="-2" pref="270" max="-2" attributes="0"/>
-                  <Component id="btnManageEmpUserAcc" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="lblHeader" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnManageOrganization" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnManageEmpUserAcc" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnPublishJobs" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
+                  <Component id="btnManageJobApplications" alignment="0" min="-2" pref="270" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="272" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jLabel2" pref="529" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -38,16 +40,21 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="lblHeader" min="-2" pref="26" max="-2" attributes="0"/>
-              <EmptySpace min="114" pref="114" max="-2" attributes="0"/>
-              <Component id="btnManageOrganization" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
-              <Component id="btnPublishJobs" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
-              <Component id="btnManageJobApplications" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
-              <Component id="btnManageEmpUserAcc" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="392" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel2" min="-2" pref="569" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="lblHeader" min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                      <Component id="btnManageOrganization" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
+                      <Component id="btnPublishJobs" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
+                      <Component id="btnManageJobApplications" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="btnManageEmpUserAcc" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="303" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,6 +100,13 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmpUserAccActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Images/TrustAdmin.gif"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

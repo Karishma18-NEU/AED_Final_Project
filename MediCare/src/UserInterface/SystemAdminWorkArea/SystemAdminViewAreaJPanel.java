@@ -171,7 +171,7 @@ public class SystemAdminViewAreaJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 238, 90, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 90, -1));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

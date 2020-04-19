@@ -68,6 +68,8 @@ public class SignUpJPanel extends javax.swing.JPanel {
         passFld = new javax.swing.JPasswordField();
         confirmPassFld = new javax.swing.JPasswordField();
         lblPassword2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -78,7 +80,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Sign Up");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 290, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 290, 26));
 
         btnAddAccount.setText("Add Account");
         btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
@@ -86,34 +88,40 @@ public class SignUpJPanel extends javax.swing.JPanel {
                 btnAddAccountActionPerformed(evt);
             }
         });
-        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, -1, -1));
+        add(btnAddAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
-        add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, 150, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
+        add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 150, -1));
 
         lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUserName.setText("User Name");
-        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 90, -1));
+        add(lblUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 90, -1));
 
         lblPassword1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword1.setText("Confirm Password");
-        add(lblPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 140, -1));
+        add(lblPassword1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 140, -1));
 
         lblUserName1.setText("Name");
-        add(lblUserName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, -1));
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 150, -1));
-        add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 150, -1));
-        add(confirmPassFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, 150, -1));
+        add(lblUserName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, -1, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 150, -1));
+        add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, 150, -1));
+        add(confirmPassFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 150, -1));
 
         lblPassword2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword2.setText("Password");
-        add(lblPassword2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 90, -1));
+        add(lblPassword2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 90, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/signup.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 120, 510, 440));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/plus.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAccountActionPerformed
@@ -230,6 +238,8 @@ public class SignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAddAccount;
     private javax.swing.JButton btnBack;
     private javax.swing.JPasswordField confirmPassFld;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblPassword1;
     private javax.swing.JLabel lblPassword2;

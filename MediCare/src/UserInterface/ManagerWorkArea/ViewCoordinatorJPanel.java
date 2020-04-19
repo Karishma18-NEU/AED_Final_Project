@@ -75,13 +75,13 @@ public class ViewCoordinatorJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 91, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 40, 40));
 
         tblViewCoordinators.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -104,12 +104,12 @@ public class ViewCoordinatorJPanel extends javax.swing.JPanel {
             tblViewCoordinators.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 532, 249));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 110, 500, 249));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("View Coordinators");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 220, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 220, 26));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

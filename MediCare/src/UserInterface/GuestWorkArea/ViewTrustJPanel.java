@@ -110,32 +110,32 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 90, -1));
+        jPanel1.add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 90, -1));
 
         lblCountry.setText("Select Country:");
-        jPanel1.add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, -1, 20));
+        jPanel1.add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, 20));
 
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCountryActionPerformed(evt);
             }
         });
-        jPanel1.add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 150, -1));
+        jPanel1.add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 150, -1));
 
-        jPanel1.add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 150, -1));
+        jPanel1.add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 150, -1));
 
         lblCity.setText("Select City:");
-        jPanel1.add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, -1, 20));
+        jPanel1.add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, 20));
 
         lblState1.setText("Select State:");
-        jPanel1.add(lblState1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, -1, 20));
+        jPanel1.add(lblState1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, 20));
 
         cbState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbStateActionPerformed(evt);
             }
         });
-        jPanel1.add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 150, -1));
+        jPanel1.add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 150, -1));
 
         tblTrust.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -159,36 +159,34 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         tblScrollPane.setViewportView(tblTrust);
         tblTrust.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
-        jPanel1.add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 340, 170));
+        jPanel1.add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 340, 170));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("View Trust");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 250, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 250, -1));
 
-        btnBack1.setText("Back");
+        btnBack1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBack1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel1.add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addGap(0, 100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addGap(0, 100, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

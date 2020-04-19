@@ -95,18 +95,18 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Publish Jobs");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, 280, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 280, 26));
 
         tblJobs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

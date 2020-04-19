@@ -61,14 +61,15 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(900, 900));
         setPreferredSize(new java.awt.Dimension(900, 900));
 
+        splitPane.setBackground(new java.awt.Color(255, 255, 255));
         splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
         splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
 
-        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        controlJPanel.setBackground(new java.awt.Color(255, 204, 255));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setPreferredSize(new java.awt.Dimension(200, 200));
@@ -100,14 +101,12 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnWorkArea, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                    .addComponent(btnViewArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnLogout)
+                    .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnWorkArea, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                        .addComponent(btnViewArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(btnLogout)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +117,7 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
                 .addComponent(btnWorkArea)
                 .addGap(55, 55, 55)
                 .addComponent(btnViewArea)
-                .addContainerGap(627, Short.MAX_VALUE))
+                .addContainerGap(650, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);
@@ -135,7 +134,7 @@ public class ManagerHomeJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1531, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

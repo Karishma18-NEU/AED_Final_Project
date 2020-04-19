@@ -143,11 +143,11 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Issue Request");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 460, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 460, 26));
 
         lblIssue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblIssue.setText("Describe the issue:");
-        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 109, 30));
+        lblIssue.setText("Description:");
+        add(lblIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 109, 30));
 
         txtAreaIssue.setColumns(20);
         txtAreaIssue.setLineWrap(true);
@@ -156,26 +156,26 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
         txtAreaIssue.setWrapStyleWord(true);
         jScrollPane.setViewportView(txtAreaIssue);
 
-        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 419, -1));
+        add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 419, -1));
 
-        btnRaiseIssue.setText("Raise Issue");
+        btnRaiseIssue.setText("Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRaiseIssueActionPerformed(evt);
             }
         });
-        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 95, -1));
+        add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 460, 95, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 40, 40));
 
         cbTrust.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(cbTrust, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 150, -1));
+        add(cbTrust, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, 150, -1));
 
         cbCountry.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
@@ -183,7 +183,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
                 cbCountryActionPerformed(evt);
             }
         });
-        add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 150, -1));
+        add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 150, -1));
 
         cbCity.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbCity.addActionListener(new java.awt.event.ActionListener() {
@@ -191,7 +191,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
                 cbCityActionPerformed(evt);
             }
         });
-        add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 150, -1));
+        add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 150, -1));
 
         cbState.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbState.addActionListener(new java.awt.event.ActionListener() {
@@ -199,19 +199,19 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
                 cbStateActionPerformed(evt);
             }
         });
-        add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 150, -1));
+        add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, 150, -1));
 
         lblCountry.setText("Select Country:");
-        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, 20));
+        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, -1, 20));
 
         lblState.setText("Select State:");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, -1, 20));
+        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, -1, 20));
 
         lblCity.setText("Select City:");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, -1, 20));
+        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, 20));
 
         lblNGO.setText("Select Trust:");
-        add(lblNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
+        add(lblNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRaiseIssueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRaiseIssueActionPerformed

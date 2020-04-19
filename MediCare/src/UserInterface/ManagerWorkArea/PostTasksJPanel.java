@@ -84,7 +84,7 @@ public class PostTasksJPanel extends javax.swing.JPanel {
                 btnPostTasksActionPerformed(evt);
             }
         });
-        add(btnPostTasks, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 390, 140, -1));
+        add(btnPostTasks, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 140, -1));
 
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
@@ -92,15 +92,15 @@ public class PostTasksJPanel extends javax.swing.JPanel {
                 btnRefreshActionPerformed(evt);
             }
         });
-        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, -1, -1));
+        add(btnRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 91, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
         tblPostTasks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -127,12 +127,12 @@ public class PostTasksJPanel extends javax.swing.JPanel {
             tblPostTasks.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 133, 670, 210));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 670, 210));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Tasks");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 220, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 290, 50));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPostTasksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPostTasksActionPerformed

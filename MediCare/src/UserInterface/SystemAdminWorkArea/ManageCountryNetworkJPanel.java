@@ -53,6 +53,7 @@ public class ManageCountryNetworkJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         tblScrollPane = new javax.swing.JScrollPane();
         tblCountry = new javax.swing.JTable();
         lblName = new javax.swing.JLabel();
@@ -60,6 +61,8 @@ public class ManageCountryNetworkJPanel extends javax.swing.JPanel {
         btnSubmit = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -104,18 +107,18 @@ public class ManageCountryNetworkJPanel extends javax.swing.JPanel {
         });
         add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, -1, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Country Network");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 380, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 380, 26));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -158,6 +161,7 @@ public class ManageCountryNetworkJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnSubmit;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JLabel lblName;
     private javax.swing.JTable tblCountry;

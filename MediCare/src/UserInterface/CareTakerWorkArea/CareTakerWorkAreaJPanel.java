@@ -49,6 +49,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
         btnManageSenior = new javax.swing.JButton();
         btnViewSenior = new javax.swing.JButton();
         btnSendForTreatment = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,7 +57,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("CareTaker Work Area");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 270, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 270, 26));
 
         btnManageSenior.setText("Manage Senior Care");
         btnManageSenior.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +65,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageSeniorActionPerformed(evt);
             }
         });
-        add(btnManageSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 200, 40));
+        add(btnManageSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 200, 40));
 
         btnViewSenior.setText("View Seniors");
         btnViewSenior.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +73,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewSeniorActionPerformed(evt);
             }
         });
-        add(btnViewSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 200, 40));
+        add(btnViewSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 200, 40));
 
         btnSendForTreatment.setText("Send Senior for Treatment");
         btnSendForTreatment.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +81,10 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
                 btnSendForTreatmentActionPerformed(evt);
             }
         });
-        add(btnSendForTreatment, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 200, 40));
+        add(btnSendForTreatment, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 280, 200, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/caretaker.png"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 550, 410));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageSeniorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageSeniorActionPerformed
@@ -113,6 +117,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageSenior;
     private javax.swing.JButton btnSendForTreatment;
     private javax.swing.JButton btnViewSenior;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

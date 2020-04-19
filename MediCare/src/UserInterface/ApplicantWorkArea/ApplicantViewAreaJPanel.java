@@ -44,6 +44,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         lblHeader = new javax.swing.JLabel();
         btnTrustList = new javax.swing.JButton();
         btnHelpline = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -51,7 +52,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Applicant view Area");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 27));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 250, 27));
 
         btnTrustList.setText("Trusts of EcoSystem");
         btnTrustList.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +60,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
                 btnTrustListActionPerformed(evt);
             }
         });
-        add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 251, -1));
+        add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 251, -1));
 
         btnHelpline.setText("Helpline");
         btnHelpline.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +68,10 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
                 btnHelplineActionPerformed(evt);
             }
         });
-        add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 251, -1));
+        add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 251, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/view.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 100, 330, 400));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnTrustListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrustListActionPerformed
@@ -88,6 +92,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHelpline;
     private javax.swing.JButton btnTrustList;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

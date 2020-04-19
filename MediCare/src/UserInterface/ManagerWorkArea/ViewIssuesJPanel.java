@@ -81,13 +81,13 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 91, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
         btnResolveIssue.setText("Resolve Issue");
         btnResolveIssue.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +120,7 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("View Issues");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 220, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 220, 26));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

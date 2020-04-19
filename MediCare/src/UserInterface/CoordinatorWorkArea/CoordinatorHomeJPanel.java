@@ -61,7 +61,11 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
         btnViewArea = new javax.swing.JButton();
         userProcessContainer = new javax.swing.JPanel();
 
-        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        splitPane.setBackground(new java.awt.Color(255, 255, 255));
+
+        controlJPanel.setBackground(new java.awt.Color(255, 204, 255));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
@@ -125,7 +129,7 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(splitPane, javax.swing.GroupLayout.PREFERRED_SIZE, 907, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(splitPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1165, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

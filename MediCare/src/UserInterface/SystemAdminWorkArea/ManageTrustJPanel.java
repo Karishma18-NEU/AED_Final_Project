@@ -166,7 +166,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         });
         add(btnAddNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, 90, 30));
 
-        btnDeleteNGO.setText("Delete TRUST");
+        btnDeleteNGO.setText("Delete Trust");
         btnDeleteNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteNGOActionPerformed(evt);
@@ -244,18 +244,18 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         });
         add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 150, 30));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 40, 40));
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage TRUST");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 450, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 450, 26));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddNGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNGOActionPerformed
