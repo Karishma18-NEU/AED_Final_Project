@@ -47,6 +47,7 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
         lblHeader = new javax.swing.JLabel();
         btnOngoingProjects = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,7 +63,10 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
                 btnOngoingProjectsActionPerformed(evt);
             }
         });
-        add(btnOngoingProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, 30));
+        add(btnOngoingProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 180, 150, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/coordinators.gif"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 730, 550));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOngoingProjectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOngoingProjectsActionPerformed
@@ -76,6 +80,7 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOngoingProjects;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

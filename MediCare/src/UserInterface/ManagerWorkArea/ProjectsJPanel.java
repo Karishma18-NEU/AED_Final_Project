@@ -97,13 +97,13 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         });
         add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 590, 123, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 91, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 40, 40));
 
         lblBudget.setText("Budget:");
         add(lblBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, -1, -1));
@@ -140,7 +140,7 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Projects");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 220, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 220, 26));
 
         cbName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Provide Medication", "Provide Treatment", "Donate Basic Amenities"}));
         cbName.addActionListener(new java.awt.event.ActionListener() {

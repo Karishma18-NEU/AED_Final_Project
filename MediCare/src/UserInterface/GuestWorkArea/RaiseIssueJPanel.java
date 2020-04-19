@@ -44,6 +44,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         btnTreatmentOldAgeHome = new javax.swing.JButton();
         btnDonation = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -54,7 +55,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Raise A Request");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 180, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 180, 26));
 
         btnMedications.setText("Provide Medications");
         btnMedications.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +63,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnMedicationsActionPerformed(evt);
             }
         });
-        add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 182, -1));
+        add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 182, -1));
 
         btnTreatmentOldAgeHome.setText("Provide Treatment");
         btnTreatmentOldAgeHome.addActionListener(new java.awt.event.ActionListener() {
@@ -70,7 +71,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnTreatmentOldAgeHomeActionPerformed(evt);
             }
         });
-        add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, 182, -1));
+        add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 182, -1));
 
         btnDonation.setText("Donation of Basic Amenities");
         btnDonation.addActionListener(new java.awt.event.ActionListener() {
@@ -78,15 +79,18 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
                 btnDonationActionPerformed(evt);
             }
         });
-        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 182, -1));
+        add(btnDonation, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 300, 182, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 40, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/request.jpg"))); // NOI18N
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 330, 560, 310));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMedicationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedicationsActionPerformed
@@ -126,6 +130,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnDonation;
     private javax.swing.JButton btnMedications;
     private javax.swing.JButton btnTreatmentOldAgeHome;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

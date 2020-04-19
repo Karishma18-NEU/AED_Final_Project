@@ -50,6 +50,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         btnManageChildren = new javax.swing.JButton();
         lblHeader = new javax.swing.JLabel();
         btnViewChildren = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -75,7 +76,10 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                 btnViewChildrenActionPerformed(evt);
             }
         });
-        add(btnViewChildren, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 200, 30));
+        add(btnViewChildren, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 200, 30));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doc.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 530, 950));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageChildrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageChildrenActionPerformed
@@ -98,6 +102,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageChildren;
     private javax.swing.JButton btnViewChildren;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     // End of variables declaration//GEN-END:variables
 }

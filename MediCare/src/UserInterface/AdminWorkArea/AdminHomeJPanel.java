@@ -80,7 +80,7 @@ public class AdminHomeJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
-        controlJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        controlJPanel.setBackground(new java.awt.Color(255, 204, 255));
 
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {

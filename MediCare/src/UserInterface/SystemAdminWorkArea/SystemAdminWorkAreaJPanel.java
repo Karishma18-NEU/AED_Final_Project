@@ -140,7 +140,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jTree.setMinimumSize(new java.awt.Dimension(200, 200));
         jScrollPane1.setViewportView(jTree);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 900));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 900));
 
         btnManageState.setText("Manage State Network");
         btnManageState.addActionListener(new java.awt.event.ActionListener() {

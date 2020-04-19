@@ -125,6 +125,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         cbTrustName = new javax.swing.JComboBox();
         btnBack = new javax.swing.JButton();
         lblWarning = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -135,23 +136,23 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Sign Up As Funding Agency");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 24));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 250, 24));
 
         lblBudget.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblBudget.setText("Budget:");
-        add(lblBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 96, 20));
+        add(lblBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 96, 20));
 
         lblAgencyName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblAgencyName.setText("Agency Name:");
-        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 96, 20));
+        add(lblAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 96, 20));
 
         lblCountry.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCountry.setText("Country:");
-        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, 96, 27));
+        add(lblCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 96, 27));
 
         lblState.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblState.setText("State:");
-        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 96, 27));
+        add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 96, 27));
 
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
@@ -159,51 +160,54 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, -1, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, -1, -1));
 
         lblCity.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblCity.setText("City:");
-        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 96, 27));
-        add(txtAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 150, -1));
-        add(txtBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 150, -1));
+        add(lblCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 210, 96, 27));
+        add(txtAgencyName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 150, -1));
+        add(txtBudget, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 330, 150, -1));
 
         cbCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCountryActionPerformed(evt);
             }
         });
-        add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 150, -1));
+        add(cbCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, 150, -1));
 
         cbState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbStateActionPerformed(evt);
             }
         });
-        add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 150, -1));
+        add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 150, -1));
 
         cbCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCityActionPerformed(evt);
             }
         });
-        add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 150, -1));
+        add(cbCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 210, 150, -1));
 
         lblEnterpriseType.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblEnterpriseType.setText("Trust Name:");
-        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 80, 20));
-        add(cbTrustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 150, -1));
+        add(lblEnterpriseType, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, 80, 20));
+        add(cbTrustName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 250, 150, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, 40));
 
         lblWarning.setForeground(new java.awt.Color(255, 0, 51));
         lblWarning.setText("* Budget currency is considered to be in US Dollar");
         add(lblWarning, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 650, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hi.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 60, 370, 400));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
@@ -288,6 +292,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<Object> cbCountry;
     private javax.swing.JComboBox<Object> cbState;
     private javax.swing.JComboBox cbTrustName;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblAgencyName;
     private javax.swing.JLabel lblBudget;
     private javax.swing.JLabel lblCity;

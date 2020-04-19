@@ -93,6 +93,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         tblJobs = new javax.swing.JTable();
         btnApply = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 700));
@@ -103,7 +104,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Apply For Job");
-        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 450, 26));
+        add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 450, 26));
 
         tblJobs.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -132,7 +133,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
             tblJobs.getColumnModel().getColumn(4).setResizable(false);
         }
 
-        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, -1, 178));
+        add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, 140));
 
         btnApply.setText("Apply");
         btnApply.addActionListener(new java.awt.event.ActionListener() {
@@ -140,15 +141,18 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
                 btnApplyActionPerformed(evt);
             }
         });
-        add(btnApply, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 240, -1, -1));
+        add(btnApply, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, -1, -1));
 
-        btnBack.setText("Back");
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 40, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/job-apply.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-300, 160, 1740, 750));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnApplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApplyActionPerformed
@@ -235,6 +239,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApply;
     private javax.swing.JButton btnBack;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblHeader;
     private javax.swing.JTable tblJobs;
     private javax.swing.JScrollPane tblScrollPane;

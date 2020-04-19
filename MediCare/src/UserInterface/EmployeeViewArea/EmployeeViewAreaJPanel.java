@@ -111,7 +111,9 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel1.add(btnViewResolved, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 251, -1));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 10, 130, 160));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/view.gif"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 330, 400));
 
         btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
         btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
