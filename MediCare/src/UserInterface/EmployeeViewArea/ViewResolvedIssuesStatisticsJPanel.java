@@ -372,7 +372,9 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
+
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, 40));
+
 
         lblHeader.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
