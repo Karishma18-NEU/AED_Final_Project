@@ -44,6 +44,7 @@ public class HelplineJPanel extends javax.swing.JPanel {
         jTextArea2 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
 
+
         setBackground(new java.awt.Color(255, 255, 255));
 
         btnBack.setBackground(new java.awt.Color(255, 255, 255));
@@ -66,13 +67,12 @@ public class HelplineJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Contact Us: ");
 
+
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jTextArea2.setText("\n  +1 (857) 1231234\n  +1 (857) 1231235\n  +1 (857) 1231236");
         jScrollPane2.setViewportView(jTextArea2);
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Helpline.jpg"))); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -92,9 +92,11 @@ public class HelplineJPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(237, 237, 237)))
                     .addGroup(layout.createSequentialGroup()
+
                         .addGap(251, 251, 251)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(255, Short.MAX_VALUE))
+
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,9 +112,11 @@ public class HelplineJPanel extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
+
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(227, Short.MAX_VALUE))
+
         );
     }// </editor-fold>//GEN-END:initComponents
 
