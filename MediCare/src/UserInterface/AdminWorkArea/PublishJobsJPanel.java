@@ -129,6 +129,7 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 500, 190));
 
+        btnDeleteJob.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteJob.setText("Delete Job");
         btnDeleteJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,13 +148,14 @@ public class PublishJobsJPanel extends javax.swing.JPanel {
         });
         add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 150, -1));
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSubmitActionPerformed(evt);
             }
         });
-        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, -1, -1));
+        add(btnSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 450, 90, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

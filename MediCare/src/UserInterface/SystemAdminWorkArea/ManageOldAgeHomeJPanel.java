@@ -147,6 +147,7 @@ public class ManageOldAgeHomeJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        btnAddNGO.setBackground(new java.awt.Color(113, 160, 160));
         btnAddNGO.setText("Add Home");
         btnAddNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,6 +155,7 @@ public class ManageOldAgeHomeJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDeleteNGO.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteNGO.setText("Delete Home");
         btnDeleteNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

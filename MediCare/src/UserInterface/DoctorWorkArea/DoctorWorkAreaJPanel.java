@@ -57,6 +57,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnManageChildren.setBackground(new java.awt.Color(113, 160, 160));
         btnManageChildren.setText("Manage Senior Patients");
         btnManageChildren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +71,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Doctor Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 270, 26));
 
+        btnViewChildren.setBackground(new java.awt.Color(113, 160, 160));
         btnViewChildren.setText("View Senior Patients");
         btnViewChildren.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

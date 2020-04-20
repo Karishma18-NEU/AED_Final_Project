@@ -104,6 +104,7 @@ public class ViewTrustJPanel extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 700));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

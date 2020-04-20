@@ -102,6 +102,7 @@ public class SendSeniorForTreatmentJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblViewCoordinators);
 
+        submitJButton.setBackground(new java.awt.Color(113, 160, 160));
         submitJButton.setText("Send for Treatment");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

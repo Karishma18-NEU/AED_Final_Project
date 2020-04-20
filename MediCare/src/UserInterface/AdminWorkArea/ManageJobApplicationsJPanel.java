@@ -117,6 +117,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 480, 178));
 
+        btnAccept.setBackground(new java.awt.Color(113, 160, 160));
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,6 +126,7 @@ public class ManageJobApplicationsJPanel extends javax.swing.JPanel {
         });
         add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, 100, -1));
 
+        btnDelete.setBackground(new java.awt.Color(113, 160, 160));
         btnDelete.setText("Reject");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

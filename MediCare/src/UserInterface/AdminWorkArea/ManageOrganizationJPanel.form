@@ -83,6 +83,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnDeleteOrganization">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete Organization"/>
       </Properties>
       <Events>
@@ -126,6 +129,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnAddOrganization1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Organization"/>
       </Properties>
       <Events>

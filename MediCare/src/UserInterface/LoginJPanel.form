@@ -78,6 +78,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnLogin">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="52" green="b6" red="eb" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
       <Events>
@@ -91,6 +94,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnGuestLogin">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="52" green="b6" red="eb" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Sign in as Guest"/>
       </Properties>
       <Events>

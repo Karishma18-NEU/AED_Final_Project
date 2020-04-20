@@ -114,6 +114,7 @@ public class ManageStateNetworkJPanel extends javax.swing.JPanel {
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
         add(txtFldName, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 150, -1));
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

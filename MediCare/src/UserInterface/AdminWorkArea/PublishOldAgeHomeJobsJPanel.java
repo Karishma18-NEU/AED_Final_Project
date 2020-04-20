@@ -125,6 +125,7 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
         tblJobs.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblJobs);
 
+        btnDeleteJob.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteJob.setText("Delete Job");
         btnDeleteJob.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +135,7 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
 
         lblName.setText("Job Title:");
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +166,7 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
                             .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGap(329, 329, 329)
-                            .addComponent(btnSubmit))))
+                            .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(174, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -177,8 +179,8 @@ public class PublishOldAgeHomeJobsJPanel extends javax.swing.JPanel {
                 .addGap(74, 74, 74)
                 .addComponent(tblScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnDeleteJob, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addComponent(btnDeleteJob)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblName)
                     .addComponent(txtFldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

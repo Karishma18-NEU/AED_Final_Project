@@ -89,6 +89,7 @@ public class ViewIssuesJPanel extends javax.swing.JPanel {
         });
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 40, 40));
 
+        btnResolveIssue.setBackground(new java.awt.Color(113, 160, 160));
         btnResolveIssue.setText("Resolve Issue");
         btnResolveIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

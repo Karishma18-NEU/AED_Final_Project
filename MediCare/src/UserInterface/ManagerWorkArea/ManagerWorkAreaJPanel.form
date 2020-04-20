@@ -34,6 +34,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnManageFundingAgencies">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Funding Agencies"/>
       </Properties>
       <Events>
@@ -47,6 +50,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPostTasks">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Post Tasks"/>
       </Properties>
       <Events>
@@ -60,6 +66,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnViewIssues">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View Issues"/>
       </Properties>
       <Events>
@@ -73,6 +82,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnProjects">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Projects"/>
       </Properties>
       <Events>
@@ -86,6 +98,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnAccount">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Account"/>
       </Properties>
       <Events>
@@ -99,6 +114,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnViewVolunteers">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View Coordinators"/>
       </Properties>
       <Events>

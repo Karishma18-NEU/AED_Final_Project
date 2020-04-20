@@ -78,6 +78,7 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnPostTasks.setBackground(new java.awt.Color(113, 160, 160));
         btnPostTasks.setText("Post Task");
         btnPostTasks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +87,7 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         });
         add(btnPostTasks, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 140, -1));
 
+        btnRefresh.setBackground(new java.awt.Color(113, 160, 160));
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

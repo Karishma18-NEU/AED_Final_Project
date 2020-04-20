@@ -153,6 +153,7 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 500, 170));
 
+        btnDeleteAcc.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteAcc.setText("Delete Account");
         btnDeleteAcc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,6 +198,7 @@ public class ManageEmployeeUserAccountJPanel extends javax.swing.JPanel {
         lblPassword.setText("Password");
         add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 70, -1));
 
+        btnAddAccount.setBackground(new java.awt.Color(113, 160, 160));
         btnAddAccount.setText("Add Account");
         btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

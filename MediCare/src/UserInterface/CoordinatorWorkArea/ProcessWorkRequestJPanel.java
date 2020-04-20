@@ -186,6 +186,7 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
 
         jLabel3.setText("Name of the Patient:");
 
+        submitJButton1.setBackground(new java.awt.Color(113, 160, 160));
         submitJButton1.setText("Send Medications");
         submitJButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

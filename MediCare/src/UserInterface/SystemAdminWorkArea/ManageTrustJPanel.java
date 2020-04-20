@@ -158,6 +158,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         setName(""); // NOI18N
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnAddNGO.setBackground(new java.awt.Color(113, 160, 160));
         btnAddNGO.setText("Add Trust");
         btnAddNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +167,7 @@ public class ManageTrustJPanel extends javax.swing.JPanel {
         });
         add(btnAddNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 570, 90, 30));
 
+        btnDeleteNGO.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteNGO.setText("Delete Trust");
         btnDeleteNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -60,6 +60,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Guest Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 10, 250, 27));
 
+        btnTrustList.setBackground(new java.awt.Color(113, 160, 160));
         btnTrustList.setText("Trust of EcoSystem");
         btnTrustList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +69,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 251, -1));
 
+        btnJobApplication.setBackground(new java.awt.Color(113, 160, 160));
         btnJobApplication.setText("View Jobs");
         btnJobApplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +78,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnJobApplication, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 251, -1));
 
+        btnAgencySignup.setBackground(new java.awt.Color(113, 160, 160));
         btnAgencySignup.setText("Sign Up as Funding Agency");
         btnAgencySignup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +87,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnAgencySignup, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 251, -1));
 
+        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
         btnRaiseIssue.setText("Raise A Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +96,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 251, -1));
 
+        btnHelpline.setBackground(new java.awt.Color(113, 160, 160));
         btnHelpline.setText("Helpline");
         btnHelpline.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +105,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 251, -1));
 
+        btnLogout.setBackground(new java.awt.Color(113, 160, 160));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,6 +114,7 @@ public class GuestWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 110, -1));
 
+        btnOldAgeHomeList.setBackground(new java.awt.Color(113, 160, 160));
         btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
         btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -93,6 +93,7 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         });
         add(cbProjectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 149, -1));
 
+        btnPost.setBackground(new java.awt.Color(113, 160, 160));
         btnPost.setText("Post");
         btnPost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

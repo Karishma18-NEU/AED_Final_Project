@@ -73,6 +73,7 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         lblName.setText("Appl");
         add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 150, 22));
 
+        btnViewJobs.setBackground(new java.awt.Color(113, 160, 160));
         btnViewJobs.setText("View Jobs");
         btnViewJobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +82,7 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnViewJobs, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 125, 217, -1));
 
+        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
         btnRaiseIssue.setText("Raise A Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +91,7 @@ public class ApplicantWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnRaiseIssue, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 224, 217, -1));
 
+        btnViewApplications.setBackground(new java.awt.Color(113, 160, 160));
         btnViewApplications.setText("View Application Status");
         btnViewApplications.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

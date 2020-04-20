@@ -55,6 +55,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnManageState">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage State Network"/>
       </Properties>
       <Events>
@@ -68,6 +71,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageCountry">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Country Network"/>
       </Properties>
       <Events>
@@ -81,6 +87,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageCity">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage City Network"/>
       </Properties>
       <Events>
@@ -94,6 +103,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageNGO">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Trust"/>
       </Properties>
       <Events>
@@ -107,6 +119,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageNGOAdmin">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Trust Admin"/>
       </Properties>
       <Events>
@@ -134,6 +149,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageRehabilation">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage OldAgeHome"/>
       </Properties>
       <Events>
@@ -147,6 +165,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageRehabilationAdmin">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage OldAgeHome Admin"/>
       </Properties>
       <Events>

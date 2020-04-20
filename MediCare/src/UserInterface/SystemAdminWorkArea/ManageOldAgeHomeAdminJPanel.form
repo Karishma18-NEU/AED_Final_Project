@@ -241,6 +241,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDeleteAdmin">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete Admin"/>
       </Properties>
       <Events>
@@ -306,6 +309,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnSubmit1">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
       <Events>

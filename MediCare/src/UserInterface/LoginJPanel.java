@@ -80,6 +80,7 @@ public class LoginJPanel extends javax.swing.JPanel {
         add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 420, 120, -1));
         add(passFld, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 460, 120, -1));
 
+        btnLogin.setBackground(new java.awt.Color(235, 182, 82));
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +89,7 @@ public class LoginJPanel extends javax.swing.JPanel {
         });
         add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 510, 150, -1));
 
+        btnGuestLogin.setBackground(new java.awt.Color(235, 182, 82));
         btnGuestLogin.setText("Sign in as Guest");
         btnGuestLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

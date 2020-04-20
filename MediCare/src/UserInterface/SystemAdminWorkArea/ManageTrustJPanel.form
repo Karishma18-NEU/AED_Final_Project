@@ -33,6 +33,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnAddNGO">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Trust"/>
       </Properties>
       <Events>
@@ -46,6 +49,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDeleteNGO">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete Trust"/>
       </Properties>
       <Events>

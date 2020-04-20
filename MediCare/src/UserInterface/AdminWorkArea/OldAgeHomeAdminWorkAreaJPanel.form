@@ -71,6 +71,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageOrganization">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Organization"/>
       </Properties>
       <Events>
@@ -79,6 +82,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnPublishJobs">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Publish Jobs"/>
       </Properties>
       <Events>
@@ -87,6 +93,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageJobApplications">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Job Applications"/>
       </Properties>
       <Events>
@@ -95,6 +104,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnManageEmpUserAcc">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Employee User Account"/>
       </Properties>
       <Events>

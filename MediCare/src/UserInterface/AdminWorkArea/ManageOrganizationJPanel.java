@@ -108,6 +108,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, -1, 150));
 
+        btnDeleteOrganization.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteOrganization.setText("Delete Organization");
         btnDeleteOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +123,7 @@ public class ManageOrganizationJPanel extends javax.swing.JPanel {
         lblOrgType.setText("Organization Type:");
         add(lblOrgType, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, -1, -1));
 
+        btnAddOrganization1.setBackground(new java.awt.Color(113, 160, 160));
         btnAddOrganization1.setText("Add Organization");
         btnAddOrganization1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

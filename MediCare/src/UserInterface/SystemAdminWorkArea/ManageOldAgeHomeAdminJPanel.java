@@ -225,6 +225,7 @@ public class ManageOldAgeHomeAdminJPanel extends javax.swing.JPanel {
 
         lblPassword.setText("Password:");
 
+        btnDeleteAdmin.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteAdmin.setText("Delete Admin");
         btnDeleteAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,6 +252,7 @@ public class ManageOldAgeHomeAdminJPanel extends javax.swing.JPanel {
         tblTrustAdmin.setMaximumSize(new java.awt.Dimension(75, 0));
         tblScrollPane.setViewportView(tblTrustAdmin);
 
+        btnSubmit1.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit1.setText("Submit");
         btnSubmit1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -135,13 +135,14 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, 140));
 
+        btnApply.setBackground(new java.awt.Color(113, 160, 160));
         btnApply.setText("Apply");
         btnApply.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnApplyActionPerformed(evt);
             }
         });
-        add(btnApply, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, -1, -1));
+        add(btnApply, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 250, 80, -1));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {

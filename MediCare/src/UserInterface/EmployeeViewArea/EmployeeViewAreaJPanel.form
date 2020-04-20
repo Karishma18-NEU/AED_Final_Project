@@ -50,6 +50,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnTrustList">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="a0" red="71" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Trust of EcoSystem"/>
           </Properties>
           <Events>
@@ -63,6 +66,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnRaiseIssue">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="a0" red="71" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Raise Issue"/>
           </Properties>
           <Events>
@@ -90,6 +96,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnProjects">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="a0" red="71" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Projects"/>
           </Properties>
           <Events>
@@ -103,6 +112,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnHelpline">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="a0" red="71" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Helpline"/>
           </Properties>
           <Events>
@@ -116,6 +128,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnViewResolved">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="a0" red="71" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="View Resolved Issue Statistics"/>
           </Properties>
           <Events>
@@ -141,6 +156,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnOldAgeHomeList">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="a0" green="a0" red="71" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Old Age Home of EcoSystem"/>
           </Properties>
           <Events>

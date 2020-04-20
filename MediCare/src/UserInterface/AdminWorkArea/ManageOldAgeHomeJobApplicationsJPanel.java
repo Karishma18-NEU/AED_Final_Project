@@ -116,6 +116,7 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
         tblJobWorkRequest.getTableHeader().setReorderingAllowed(false);
         tblScrollPane.setViewportView(tblJobWorkRequest);
 
+        btnAccept.setBackground(new java.awt.Color(113, 160, 160));
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +124,7 @@ public class ManageOldAgeHomeJobApplicationsJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnDelete.setBackground(new java.awt.Color(113, 160, 160));
         btnDelete.setText("Reject");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -57,6 +57,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         lblHeader.setText("Raise A Request");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 180, 26));
 
+        btnMedications.setBackground(new java.awt.Color(113, 160, 160));
         btnMedications.setText("Provide Medications");
         btnMedications.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +66,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         });
         add(btnMedications, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 180, 182, -1));
 
+        btnTreatmentOldAgeHome.setBackground(new java.awt.Color(113, 160, 160));
         btnTreatmentOldAgeHome.setText("Provide Treatment");
         btnTreatmentOldAgeHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +75,7 @@ public class RaiseIssueJPanel extends javax.swing.JPanel {
         });
         add(btnTreatmentOldAgeHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 182, -1));
 
+        btnDonation.setBackground(new java.awt.Color(113, 160, 160));
         btnDonation.setText("Donation of Basic Amenities");
         btnDonation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
