@@ -79,6 +79,7 @@ public class ManageTreatmentSeniorJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnAccept.setBackground(new java.awt.Color(113, 160, 160));
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

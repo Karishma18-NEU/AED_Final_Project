@@ -78,6 +78,7 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnDelete.setBackground(new java.awt.Color(113, 160, 160));
         btnDelete.setText("Delete Project");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +90,7 @@ public class ProjectsJPanel extends javax.swing.JPanel {
         lblProjectName.setText("Project Name:");
         add(lblProjectName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
 
+        btnAdd.setBackground(new java.awt.Color(113, 160, 160));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

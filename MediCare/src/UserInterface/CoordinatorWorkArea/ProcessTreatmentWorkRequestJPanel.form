@@ -91,9 +91,9 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="backJButton" alignment="0" min="-2" pref="38" max="-2" attributes="0"/>
-                  <Component id="lblHeader" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                  <Component id="lblHeader" min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
@@ -229,6 +229,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="submitJButton">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Send to Senior Care"/>
       </Properties>
       <Events>

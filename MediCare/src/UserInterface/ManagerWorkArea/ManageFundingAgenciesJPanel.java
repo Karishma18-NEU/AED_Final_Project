@@ -93,13 +93,14 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnAccept.setBackground(new java.awt.Color(113, 160, 160));
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
             }
         });
-        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 350, 90, 30));
+        add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 90, 30));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back-button.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {

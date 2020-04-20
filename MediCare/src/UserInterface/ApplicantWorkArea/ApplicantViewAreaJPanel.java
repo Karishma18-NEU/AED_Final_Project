@@ -54,6 +54,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Applicant view Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, 250, 27));
 
+        btnTrustList.setBackground(new java.awt.Color(113, 160, 160));
         btnTrustList.setText("Trusts of EcoSystem");
         btnTrustList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +63,7 @@ public class ApplicantViewAreaJPanel extends javax.swing.JPanel {
         });
         add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 251, -1));
 
+        btnHelpline.setBackground(new java.awt.Color(113, 160, 160));
         btnHelpline.setText("Helpline");
         btnHelpline.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

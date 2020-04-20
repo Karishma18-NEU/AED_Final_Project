@@ -57,6 +57,7 @@ public class CoordinatorWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("Coordinator Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 270, 26));
 
+        btnOngoingProjects.setBackground(new java.awt.Color(113, 160, 160));
         btnOngoingProjects.setText("Ongoing Projects");
         btnOngoingProjects.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

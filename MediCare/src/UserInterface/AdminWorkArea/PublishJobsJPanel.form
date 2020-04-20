@@ -116,6 +116,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnDeleteJob">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete Job"/>
       </Properties>
       <Events>
@@ -149,6 +152,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnSubmit">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
       <Events>
@@ -156,7 +162,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="350" y="450" width="-1" height="-1"/>
+          <AbsoluteConstraints x="340" y="450" width="90" height="30"/>
         </Constraint>
       </Constraints>
     </Component>

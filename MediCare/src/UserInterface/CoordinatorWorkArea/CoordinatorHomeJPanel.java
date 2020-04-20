@@ -59,16 +59,18 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
         btnLogout = new javax.swing.JButton();
         btnWorkArea = new javax.swing.JButton();
         btnViewArea = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         splitPane.setBackground(new java.awt.Color(255, 255, 255));
 
-        controlJPanel.setBackground(new java.awt.Color(255, 204, 255));
+        controlJPanel.setBackground(new java.awt.Color(113, 160, 160));
         controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
         controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
 
+        btnLogout.setBackground(new java.awt.Color(255, 255, 255));
         btnLogout.setText("Logout");
         btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +78,7 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnWorkArea.setBackground(new java.awt.Color(255, 255, 255));
         btnWorkArea.setText("Work Area");
         btnWorkArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +86,7 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnViewArea.setBackground(new java.awt.Color(255, 255, 255));
         btnViewArea.setText("View Area");
         btnViewArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,31 +94,38 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
             }
         });
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/JPanel.gif"))); // NOI18N
+
         javax.swing.GroupLayout controlJPanelLayout = new javax.swing.GroupLayout(controlJPanel);
         controlJPanel.setLayout(controlJPanelLayout);
         controlJPanelLayout.setHorizontalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnLogout)
-                .addGap(18, 18, 18))
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnWorkArea, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                     .addComponent(btnViewArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(controlJPanelLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controlJPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
         );
         controlJPanelLayout.setVerticalGroup(
             controlJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(controlJPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(24, 24, 24)
                 .addComponent(btnLogout)
-                .addGap(109, 109, 109)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnWorkArea)
-                .addGap(55, 55, 55)
+                .addGap(18, 18, 18)
                 .addComponent(btnViewArea)
-                .addContainerGap(545, Short.MAX_VALUE))
+                .addContainerGap(463, Short.MAX_VALUE))
         );
 
         splitPane.setLeftComponent(controlJPanel);
@@ -170,6 +181,7 @@ public class CoordinatorHomeJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnViewArea;
     private javax.swing.JButton btnWorkArea;
     private javax.swing.JPanel controlJPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JSplitPane splitPane;
     private javax.swing.JPanel userProcessContainer;
     // End of variables declaration//GEN-END:variables

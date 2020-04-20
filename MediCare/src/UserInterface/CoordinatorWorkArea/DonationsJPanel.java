@@ -60,6 +60,7 @@ public class DonationsJPanel extends javax.swing.JPanel {
 
         jLabel1.setText("Amenities provided : ");
 
+        submitJButton.setBackground(new java.awt.Color(113, 160, 160));
         submitJButton.setText("Submit Result");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,8 +101,8 @@ public class DonationsJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(txtWorkDone, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(submitJButton)
-                .addContainerGap(457, Short.MAX_VALUE))
+                .addComponent(submitJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(447, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

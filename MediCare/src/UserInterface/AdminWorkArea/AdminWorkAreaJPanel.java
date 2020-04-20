@@ -56,6 +56,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Admin Work Area ");
 
+        btnManageOrganization.setBackground(new java.awt.Color(113, 160, 160));
         btnManageOrganization.setText("Manage Organization");
         btnManageOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +64,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnPublishJobs.setBackground(new java.awt.Color(113, 160, 160));
         btnPublishJobs.setText("Publish Jobs");
         btnPublishJobs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +72,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnManageJobApplications.setBackground(new java.awt.Color(113, 160, 160));
         btnManageJobApplications.setText("Manage Job Applications");
         btnManageJobApplications.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +80,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnManageEmpUserAcc.setBackground(new java.awt.Color(113, 160, 160));
         btnManageEmpUserAcc.setText("Manage Employee User Account");
         btnManageEmpUserAcc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

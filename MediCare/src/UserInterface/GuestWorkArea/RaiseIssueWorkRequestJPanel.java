@@ -158,6 +158,7 @@ public class RaiseIssueWorkRequestJPanel extends javax.swing.JPanel {
 
         add(jScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 419, -1));
 
+        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
         btnRaiseIssue.setText("Request");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

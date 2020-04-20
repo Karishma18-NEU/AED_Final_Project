@@ -31,6 +31,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnManageChildren">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Manage Senior Patients"/>
       </Properties>
       <Events>
@@ -58,6 +61,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnViewChildren">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="a0" green="a0" red="71" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="View Senior Patients"/>
       </Properties>
       <Events>

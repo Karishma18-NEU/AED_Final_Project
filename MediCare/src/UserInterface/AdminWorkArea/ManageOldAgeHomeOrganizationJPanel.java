@@ -103,6 +103,7 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
         tblOrg.setMinimumSize(new java.awt.Dimension(375, 0));
         tblScrollPane.setViewportView(tblOrg);
 
+        btnDeleteOrganization.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteOrganization.setText("Delete Organization");
         btnDeleteOrganization.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,6 +120,7 @@ public class ManageOldAgeHomeOrganizationJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnAddOrganization1.setBackground(new java.awt.Color(113, 160, 160));
         btnAddOrganization1.setText("Add Organization");
         btnAddOrganization1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

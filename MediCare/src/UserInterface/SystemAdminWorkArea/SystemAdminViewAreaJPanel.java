@@ -165,6 +165,7 @@ public class SystemAdminViewAreaJPanel extends javax.swing.JPanel {
         });
         add(cbState, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 150, 30));
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

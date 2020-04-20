@@ -82,6 +82,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         lblHeader.setText("Sign Up");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 290, 26));
 
+        btnAddAccount.setBackground(new java.awt.Color(113, 160, 160));
         btnAddAccount.setText("Add Account");
         btnAddAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

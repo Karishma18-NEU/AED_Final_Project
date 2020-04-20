@@ -59,6 +59,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("CareTaker Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 40, 270, 26));
 
+        btnManageSenior.setBackground(new java.awt.Color(113, 160, 160));
         btnManageSenior.setText("Manage Senior Care");
         btnManageSenior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +68,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, 200, 40));
 
+        btnViewSenior.setBackground(new java.awt.Color(113, 160, 160));
         btnViewSenior.setText("View Seniors");
         btnViewSenior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +77,7 @@ public class CareTakerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnViewSenior, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 200, 40));
 
+        btnSendForTreatment.setBackground(new java.awt.Color(113, 160, 160));
         btnSendForTreatment.setText("Send Senior for Treatment");
         btnSendForTreatment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

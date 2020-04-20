@@ -59,6 +59,7 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(700, 700));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnManageFundingAgencies.setBackground(new java.awt.Color(113, 160, 160));
         btnManageFundingAgencies.setText("Manage Funding Agencies");
         btnManageFundingAgencies.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,6 +68,7 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageFundingAgencies, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 220, -1));
 
+        btnPostTasks.setBackground(new java.awt.Color(113, 160, 160));
         btnPostTasks.setText("Post Tasks");
         btnPostTasks.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +77,7 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnPostTasks, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 217, -1));
 
+        btnViewIssues.setBackground(new java.awt.Color(113, 160, 160));
         btnViewIssues.setText("View Issues");
         btnViewIssues.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +86,7 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnViewIssues, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 217, -1));
 
+        btnProjects.setBackground(new java.awt.Color(113, 160, 160));
         btnProjects.setText("Projects");
         btnProjects.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +95,7 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 360, 217, -1));
 
+        btnAccount.setBackground(new java.awt.Color(113, 160, 160));
         btnAccount.setText("Account");
         btnAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +104,7 @@ public class ManagerWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 217, -1));
 
+        btnViewVolunteers.setBackground(new java.awt.Color(113, 160, 160));
         btnViewVolunteers.setText("View Coordinators");
         btnViewVolunteers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

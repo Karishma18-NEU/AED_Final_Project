@@ -154,6 +154,7 @@ public class FundingAgencySignUpJPanel extends javax.swing.JPanel {
         lblState.setText("State:");
         add(lblState, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 170, 96, 27));
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

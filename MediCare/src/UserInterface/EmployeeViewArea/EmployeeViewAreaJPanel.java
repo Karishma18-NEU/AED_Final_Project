@@ -67,6 +67,7 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnTrustList.setBackground(new java.awt.Color(113, 160, 160));
         btnTrustList.setText("Trust of EcoSystem");
         btnTrustList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +76,7 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnTrustList, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 115, 251, -1));
 
+        btnRaiseIssue.setBackground(new java.awt.Color(113, 160, 160));
         btnRaiseIssue.setText("Raise Issue");
         btnRaiseIssue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,6 +90,7 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("View Area");
         jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 250, 27));
 
+        btnProjects.setBackground(new java.awt.Color(113, 160, 160));
         btnProjects.setText("Projects");
         btnProjects.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +99,7 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnProjects, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 250, -1));
 
+        btnHelpline.setBackground(new java.awt.Color(113, 160, 160));
         btnHelpline.setText("Helpline");
         btnHelpline.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +108,7 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnHelpline, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 251, -1));
 
+        btnViewResolved.setBackground(new java.awt.Color(113, 160, 160));
         btnViewResolved.setText("View Resolved Issue Statistics");
         btnViewResolved.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,6 +120,7 @@ public class EmployeeViewAreaJPanel extends javax.swing.JPanel {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/view.gif"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 330, 400));
 
+        btnOldAgeHomeList.setBackground(new java.awt.Color(113, 160, 160));
         btnOldAgeHomeList.setText("Old Age Home of EcoSystem");
         btnOldAgeHomeList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

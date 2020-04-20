@@ -123,6 +123,7 @@ public class ViewOldAgeHomeJPanel extends javax.swing.JPanel {
 
         lblCity.setText("Select City:");
 
+        btnSubmit.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit.setText("Submit");
         btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

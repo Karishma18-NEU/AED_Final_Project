@@ -358,6 +358,7 @@ public class ViewResolvedIssuesStatisticsJPanel extends javax.swing.JPanel {
         scrollPane.setMinimumSize(new java.awt.Dimension(700, 700));
         jPanel1.add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 700, 577));
 
+        btnSaveImage.setBackground(new java.awt.Color(113, 160, 160));
         btnSaveImage.setText("Save as Image");
         btnSaveImage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

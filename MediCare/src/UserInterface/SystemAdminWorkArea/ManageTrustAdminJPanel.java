@@ -241,6 +241,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
         add(txtFldUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 500, 150, -1));
         add(txtFldPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 540, 150, -1));
 
+        btnDeleteAdmin.setBackground(new java.awt.Color(113, 160, 160));
         btnDeleteAdmin.setText("Delete Admin");
         btnDeleteAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -270,6 +271,7 @@ public class ManageTrustAdminJPanel extends javax.swing.JPanel {
 
         add(tblScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, 190));
 
+        btnSubmit1.setBackground(new java.awt.Color(113, 160, 160));
         btnSubmit1.setText("Submit");
         btnSubmit1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

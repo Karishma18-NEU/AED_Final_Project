@@ -142,6 +142,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 900));
 
+        btnManageState.setBackground(new java.awt.Color(113, 160, 160));
         btnManageState.setText("Manage State Network");
         btnManageState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,6 +151,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageState, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 251, -1));
 
+        btnManageCountry.setBackground(new java.awt.Color(113, 160, 160));
         btnManageCountry.setText("Manage Country Network");
         btnManageCountry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,6 +160,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageCountry, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 251, -1));
 
+        btnManageCity.setBackground(new java.awt.Color(113, 160, 160));
         btnManageCity.setText("Manage City Network");
         btnManageCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +169,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 251, -1));
 
+        btnManageNGO.setBackground(new java.awt.Color(113, 160, 160));
         btnManageNGO.setText("Manage Trust");
         btnManageNGO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,6 +178,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageNGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 260, 251, -1));
 
+        btnManageNGOAdmin.setBackground(new java.awt.Color(113, 160, 160));
         btnManageNGOAdmin.setText("Manage Trust Admin");
         btnManageNGOAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,6 +192,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         lblHeader.setText("System Admin Work Area");
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 260, 26));
 
+        btnManageRehabilation.setBackground(new java.awt.Color(113, 160, 160));
         btnManageRehabilation.setText("Manage OldAgeHome");
         btnManageRehabilation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,6 +201,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnManageRehabilation, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 251, -1));
 
+        btnManageRehabilationAdmin.setBackground(new java.awt.Color(113, 160, 160));
         btnManageRehabilationAdmin.setText("Manage OldAgeHome Admin");
         btnManageRehabilationAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

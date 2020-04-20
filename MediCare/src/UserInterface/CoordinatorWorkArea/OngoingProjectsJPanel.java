@@ -109,6 +109,7 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 580, 230));
 
+        btnAssign.setBackground(new java.awt.Color(113, 160, 160));
         btnAssign.setText("Assign to me");
         btnAssign.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +118,7 @@ public class OngoingProjectsJPanel extends javax.swing.JPanel {
         });
         add(btnAssign, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, -1, -1));
 
+        btnProcess.setBackground(new java.awt.Color(113, 160, 160));
         btnProcess.setText("Process");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
