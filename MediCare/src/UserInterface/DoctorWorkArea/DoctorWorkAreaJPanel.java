@@ -81,7 +81,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         add(btnViewChildren, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 200, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/doc.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 530, 950));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 280, 490));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageChildrenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageChildrenActionPerformed
